@@ -2,9 +2,10 @@
 @import "../vendor/normalize.scss";
 
 /* COMMON */
-@import "./common/variables.scss";
 @import "./common/global.scss";
 @import "./common/fonts.scss";
+@import "./common/typography.scss";
+@import "./common/variables.scss";
 @import "./common/mixins.scss";
 @import "./common/helpers.scss";
 
@@ -35,3 +36,4 @@
 
 /* PAGES */
 @import "./pages/404.scss";
+
