@@ -1,5 +1,41 @@
 /* ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ */
 
-// цвета
-$color-basis: #000000;
-$color-accent: #ffffff;
+// Гарнитура
+$primary-font: "Lato", "Arial", sans-serif;
+$secondary-font: "Oswald", "Arial Narrow", sans-serif;
+
+// Гаринитура заголовков
+$title-font: "Oswald", "Arial Narrow", sans-serif;
+
+// Размер шрифта
+$font-size-base: 14px;
+
+// Высота строки
+$line-height-base: 18px;
+
+// Цвет текста
+$text-color-primary: #444444;
+$text-color-secondary: #000000;
+$text-color-tertiary: #c4c4c4;
+
+// Цвета заголовка
+$title-color-dark: #000000;
+$title-color-light: #ffffff;
+
+// Цвета рамки
+$border-color-primary: #d9d9d9;
+$border-color-secondary: #cdcdcd;
+
+// Цвета фона
+$bg-color-primary: #ffffff;
+$bg-color-secondary: #f2f2f2;
+$bg-color-tertiary: #eaeaea;
+$bg-color-brand: #68b738;
+$bg-color-brand-rgba: rgba(104, 183, 56, 0.85);
+
+// Цвета предупреждений
+$alert-color: #ff8282;
+
+// Цвета бренда
+$brand-color-primary: #68b738;
+$brand-color-secondary: #666666;

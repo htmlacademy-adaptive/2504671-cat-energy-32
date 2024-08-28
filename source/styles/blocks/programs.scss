@@ -1,0 +1,21 @@
+.programs {
+  width: 100%;
+
+  &__title {
+    @include title(24px, 37px);
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: $text-color-primary;
+  }
+
+  &__list {
+    @include no-list-style;
+  }
+
+  &__item {
+    background-color: $bg-color-secondary;
+  }
+}

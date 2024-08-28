@@ -1,5 +1,36 @@
 /* ОСНОВНЫЕ СТИЛИ ДЛЯ ТИПОГРАФИКИ ВСЕГО ПРОЕКТА */
 
-body {
+// Миксин для генерации @font-face
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+    src: $font-src;
+  }
+}
 
+// Миксин для заголовков
+@mixin title($font-size, $line-height, $color: $title-color-dark) {
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+// Подключение шрифтов
+@include font-face("Lato", 400, normal, url("/source/fonts/lato/Lato-Regular.woff2") format("woff2"));
+@include font-face("Oswald", 400, normal, url("/source/fonts/oswald/oswaldregular.woff2") format("woff2"));
+
+
+// Базовые стили
+body {
+  font-family: $primary-font;
+  font-size: $font-size-base;
+  font-weight: 400;
+  line-height: $line-height-base;
+  color: $text-color-primary;
+  background-color: $bg-color-primary;
 }

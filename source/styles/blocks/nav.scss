@@ -1,0 +1,7 @@
+.main-navigation__item {
+  @include title (20px, 20px, $title-color-dark);
+  @include no-list-style;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 46px;
+}
