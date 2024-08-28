@@ -1,0 +1,26 @@
+.catalog {
+  width: 100%;
+
+  &__title {
+    @include title(36px, 36px);
+  }
+
+  &__product-title {
+    @include title (16px, 20px, $subtitle-color-dark);
+    text-transform: uppercase;
+
+    &--wrap {
+      color: $title-color-dark-secondary;
+    }
+  }
+
+  &__list {
+    @include no-list-style;
+  }
+
+  &__item {
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
+  }
+}
+

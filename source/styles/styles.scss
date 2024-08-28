@@ -1,7 +1,38 @@
-/* GLOBAL */
-@import "./common/variables.scss";
+/* VENDOR */
+@import "../vendor/normalize.scss";
+
+/* COMMON */
 @import "./common/global.scss";
-@import "./common/fonts.scss";
+@import "./common/variables.scss";
+@import "./common/typography.scss";
+@import "./common/mixins.scss";
+@import "./common/helpers.scss";
 
 /* BLOCKS */
+@import "./blocks/page.scss";
 @import "./blocks/header.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/buttons.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/programs.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/examples.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/partnership.scss";
+@import "./blocks/location.scss";
+@import "./blocks/social.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/modal-order.scss";
+@import "./blocks/additional-products.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/news.scss";
+
+/* LAYOUT */
+@import "./layout/container.scss";
+@import "./layout/spacing.scss";
+
+/* PAGES */
+@import "./pages/404.scss";
+

@@ -1,0 +1,18 @@
+.main-navigation {
+  width: 100%;
+
+  &__list {
+    @include no-list-style;
+    width: 100%;
+  }
+
+  &__item {
+    @include title (20px, 20px, $title-color-dark);
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (max-width: 320px) {
+      margin-bottom: 46px;
+    }
+  }
+}
