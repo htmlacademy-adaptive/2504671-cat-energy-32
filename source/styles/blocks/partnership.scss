@@ -2,7 +2,7 @@
   width: 100%;
 
   &__title {
-    @include title(16px, 20px);
+    @include title(16px, 20px, $title-color-dark-secondary);
     text-transform: uppercase;
   }
 

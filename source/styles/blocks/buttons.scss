@@ -5,8 +5,10 @@ $button-font-size: 16px;
 $button-line-height: 20px;
 $button-primary-bg: #68b738;
 $button-secondary-bg: transparent;
+$button-tertiary-bg: #f2f2f2;
 $button-primary-color: #ffffff;
 $button-secondary-color: #000000;
+$button-tertiary-color: #444444;
 
 //Базовая стилизация кнопок
 .button {
@@ -39,6 +41,17 @@ $button-secondary-color: #000000;
   &--slider-icon {
     background-color: $button-secondary-bg;
   }
-}
 
-// Стили для состояний кнопки
+  &--show-all {
+    background-color: $button-tertiary-bg;
+    color: $button-tertiary-color;
+  }
+
+  // Адаптация размеров кнопок для разных размеров экрана.
+
+  @media (min-width: 320px) {
+    width: 280px;
+  }
+
+  // Стили для состояний кнопок
+}

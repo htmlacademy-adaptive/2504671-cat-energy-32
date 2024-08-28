@@ -9,9 +9,15 @@ $title-font: "Oswald", "Arial Narrow", sans-serif;
 
 // Размер шрифта
 $font-size-base: 14px;
+$font-size-xs: 12px;
+$font-size-s: 16px;
 
 // Высота строки
 $line-height-base: 18px;
+$line-height-xxs: 14px;
+$line-height-xs: 16px;
+$line-height-s: 20px;
+
 
 // Цвет текста
 $text-color-primary: #444444;
@@ -20,7 +26,11 @@ $text-color-tertiary: #c4c4c4;
 
 // Цвета заголовка
 $title-color-dark: #000000;
+$title-color-dark-secondary:#111111;
 $title-color-light: #ffffff;
+
+// Цвета подзаголовков
+$subtitle-color-dark: #222222;
 
 // Цвета рамки
 $border-color-primary: #d9d9d9;
@@ -39,3 +49,4 @@ $alert-color: #ff8282;
 // Цвета бренда
 $brand-color-primary: #68b738;
 $brand-color-secondary: #666666;
+$brand-color-tertiary: #ffffff;

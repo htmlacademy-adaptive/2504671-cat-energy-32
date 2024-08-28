@@ -1,0 +1,25 @@
+.news {
+  width: 100%;
+
+  &__title {
+    @include title(24px, 24px);
+  }
+
+  &__description {
+    @include title (16px, 24px);
+  }
+
+  &__subscription-form {
+    min-width: 280px;
+  }
+
+  &__subscription-email {
+    width: 100%;
+    padding: 13px;
+  }
+
+  &__subscription-email::placeholder {
+    @include title(20px, 30px, $text-color-primary);
+    text-transform: uppercase;
+  }
+}
