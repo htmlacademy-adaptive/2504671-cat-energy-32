@@ -1,8 +1,24 @@
 .promo {
+  position: relative;
   width: 100%;
+  max-width: 767px;
+  height: 290px;
+  min-height: 200px;
   background-color: $bg-color-brand-rgba;
   color: $brand-color-tertiary;
   font-size: $font-size-s;
   line-height: $line-height-s;
   text-align: center;
+
+  &::after {
+    @include absolute-center;
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 80px;
+    background-color: #ffffff;
+    mask-image: url("../../icons/stack.svg#gift");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }

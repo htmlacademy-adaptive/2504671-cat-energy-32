@@ -1,8 +1,29 @@
 /* ОБЩИЕ МИКСИНЫ */
 
-//Сброс стилей списка
+// Сброс стилей списка
 @mixin no-list-style {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+// Сброс отступов и полей
+@mixin no-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+
+// Выравнивание по центру
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Абсолютное центрирование элемента
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -1,26 +1,43 @@
 .catalog {
   width: 100%;
+}
 
-  &__title {
-    @include title(36px, 36px);
-  }
+.catalog__title {
+  @include title(36px, 36px);
+}
 
-  &__product-title {
-    @include title (16px, 20px, $subtitle-color-dark);
-    text-transform: uppercase;
+.catalog__product-title {
+  @include title (16px, 20px, $subtitle-color-dark);
+  text-transform: uppercase;
 
-    &--wrap {
-      color: $title-color-dark-secondary;
-    }
-  }
-
-  &__list {
-    @include no-list-style;
-  }
-
-  &__item {
-    font-size: $font-size-xs;
-    line-height: $line-height-xs;
+  &--wrap {
+    color: $title-color-dark-secondary;
   }
 }
 
+.catalog__list {
+  @include no-list-style;
+}
+
+.catalog__item {
+  position: relative;
+  font-size: $font-size-xs;
+  line-height: $line-height-xs;
+}
+
+.catalog__item--show-all {
+  @include flex-center;
+  flex-direction: column;
+  min-height: 208px;
+}
+
+.catalog__item--show-all::before {
+
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: $icon-color-primary;
+  mask-image: url("../../icons/stack.svg#plus");
+  background-size: contain;
+  background-repeat: no-repeat;
+}

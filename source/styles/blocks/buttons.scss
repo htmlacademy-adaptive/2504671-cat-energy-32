@@ -9,6 +9,7 @@ $button-tertiary-bg: #f2f2f2;
 $button-primary-color: #ffffff;
 $button-secondary-color: #000000;
 $button-tertiary-color: #444444;
+$button-hover: #5eaa2f;
 
 //Базовая стилизация кнопок
 .button {
@@ -27,15 +28,11 @@ $button-tertiary-color: #444444;
   cursor: pointer;
   transition: background-color 0.4s;
 
-  //Стили для различных типов кнопок
-
-  &--burger {
-    background-color: $button-secondary-bg;
-  }
+  //Стили для разных кнопок
 
   &--secondary {
-    color: $button-secondary-color;
     background-color: $button-secondary-bg;
+    color: $button-secondary-color;
   }
 
   &--slider-icon {
@@ -47,11 +44,28 @@ $button-tertiary-color: #444444;
     color: $button-tertiary-color;
   }
 
-  // Адаптация размеров кнопок для разных размеров экрана.
+  // Изменение размера кнопки в зависимости в зависимости от ширины экрана
 
-  @media (min-width: 320px) {
+  @media (max-width: $tablet-width) {
     width: 280px;
   }
 
   // Стили для состояний кнопок
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:active {
+    background-color: $button-hover;
+    opacity: 0.8;
+  }
+
+  &--secondary:hover {
+    background-color: $button-secondary-bg;
+  }
+
+  &--secondary:active {
+    background-color: $button-secondary-bg;
+    opacity: 0.3;
+  }
 }

@@ -1,8 +1,15 @@
 .main-footer {
   width: 100%;
-}
+  max-width: 767px;
+  padding: 50px 20px;
 
-.html-academy-logo__text {
-  font-size: 14px;
-  line-height: 20px;
+  .container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .social {
+    display: flex;
+    justify-content: flex-start;
+  }
 }

@@ -1,14 +1,24 @@
 .hero {
-  background-color: $bg-color-brand;
-}
+  width: 100%;
+  max-width: 767px;
+  height: auto;
+  background:
+    linear-gradient(to bottom, $bg-color-brand-rgba 62%, transparent 62%),
+    image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
+    url("../../images/bg-cat-mobile@2x.jpg") 2x);
+  background-size: 100% 100%, 100% 62%;
+  background-position: center, top;
+  background-repeat: no-repeat;
 
-.hero__title {
-  @include title (36px, 36px, $title-color-light);
-  text-align: center;
-}
 
-.hero__description {
-  @include title (14px, 14px, $title-color-light);
-  text-align: center;
-  text-transform: uppercase;
+  .hero__title {
+    @include title (36px, 36px, $title-color-light);
+    text-align: center;
+  }
+
+  .hero__description {
+    @include title (14px, 14p, $title-color-light);
+    text-align: center;
+    text-transform: uppercase;
+  }
 }

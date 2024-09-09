@@ -1,1 +1,17 @@
 /* СТИЛИ ДЛЯ ШАПКИ САЙТА */
+
+.main-header {
+  position: relative;
+  background-color: $bg-color-primary;
+  display: flex;
+  color: $text-color-primary;
+  width: 100%;
+  max-width: 767px;
+  padding: 0 20px;
+
+  .main-header__logo {
+    @include flex-center;
+    gap: 56px;
+    max-width: 200px;
+  }
+}

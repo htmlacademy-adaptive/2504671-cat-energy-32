@@ -14,48 +14,60 @@
 </head>
 
 <body class="page__body">
-  <div class="page-container">
+  <div class="page__container">
     <header class="main-header">
-      <div class="container">
-        <div class="main-header__logo logo">
-          <span class="visually-hidden">Логотип интернет-магазина CAT ENERGY</span>
-          <a class="logo__link" href="/" aria-current="page">
-            <picture>
-              <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-cat-desktop.svg">
-              <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-cat-tablet.svg">
-              <img class="logo__img" width="33" height="38" src="images/logo-cat-mobile.svg" alt="Логотип интернет-магазина CAT ENERGY" aria-hidden="true">
-            </picture>
-          </a>
-          <a class="logo__link" href="/" aria-current="page">
-            <picture>
-              <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
-              <img class="logo__text" width="101" height="18" src="images/logo-text.svg" alt="Логотип интернет-магазина CAT ENERGY" aria-hidden="true">
-            </picture>
-          </a>
-        </div>
-        <nav class="main-navigation">
-          <button class="main-navigation__button button button--burger" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <ul class="main-navigation__list">
-            <li class="main-navigation__item ">
-              <a class="main-navigation__link" href="index.html">
-                Главная
-              </a>
-            </li>
-            <li class="main-navigation__item main-navigation__item--current">
-              <a class="main-navigation__link" href="catalog.html" aria-current="page">
-                Каталог продукции
-              </a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="program-selection.html">
-                Подбор программы
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <h1 class="visually-hidden">Интернет-магазин CAT ENERGY: широкий ассортимент функционального питания для котов</h1>
+      <div class="main-header__logo logo">
+        <span class="visually-hidden">Логотип интернет-магазина CAT ENERGY</span>
+        <a class="logo__link" href="/">
+          <picture>
+            <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-cat-desktop.svg">
+            <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-cat-tablet.svg">
+            <img class="logo__img" width="33" height="38" src="images/logo-cat-mobile.svg" alt="Логотип интернет-магазина CAT ENERGY" aria-hidden="true">
+          </picture>
+        </a>
+        <a class="logo__link" href="/">
+          <picture>
+            <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
+            <img class="logo__text" width="101" height="18" src="images/logo-text.svg" alt="Логотип интернет-магазина CAT ENERGY" aria-hidden="true">
+          </picture>
+        </a>
       </div>
+
+      <!-- Кнопка "бургер", которая открывает меню -->
+      <a class="main-navigation__toggle main-navigation__toggle--burger" href="#mobile-menu">
+        <span class="visually-hidden">Открыть меню</span>
+        <svg class="button--burger" width="24" height="24" role="img" focusable="false">
+          <use href="icons/stack.svg#burger"></use>
+        </svg>
+      </a>
+
+      <nav class="main-navigation" id="mobile-menu">
+        <ul class="main-navigation__list mobile-menu__list">
+          <li class="main-navigation__item main-navigation__item--current mobile-menu__item">
+            <a class="main-navigation__link" href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="main-navigation__item mobile-menu__item">
+            <a class="main-navigation__link" href="/" aria-current="page">
+              Каталог продукции
+            </a>
+          </li>
+          <li class=" main-navigation__item mobile-menu__item">
+            <a class="main-navigation__link" href="program-selection.html">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+        <!-- Кнопка закрытия меню -->
+        <a class="main-navigation__toggle main-navigation__toggle--close" href="#">
+          <span class="visually-hidden">Закрыть меню</span>
+          <svg class="button--close" width="18" height="18" role="img" focusable="false">
+            <use href="icons/stack.svg#close"></use>
+          </svg>
+        </a>
+      </nav>
     </header>
     <main class="main-container">
       <section class="catalog">
@@ -65,7 +77,7 @@
             <li class="catalog__item catalog__item--regular">
               <a class="catalog__product-link" href="#">
                 <picture>
-                  <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/cat-energy-pro-500g-chicken-primary@1x.png 1x, images/cat-energy-pro-500g-chiken-primary@2x.png 2x">
+                  <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/cat-energy-pro-500g-chicken-primary@1x.png 1x, images/cat-energy-pro-500g-chicken-primary@2x.png 2x">
                   <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/cat-energy-pro-500g-chicken-primary@1x.png 1x, images/cat-energy-pro-500g-chicken-primary@2x.png 2x">
                   <img class="catalog__product-image catalog__product-image--regular" src="images/cat-energy-pro-500g-chicken-mobile@1x.png" srcset="images/cat-energy-pro-500g-chicken-mobile@2x.png 2x" width="140" height="107" alt="Корм для котов Cat Energy PRO весом 500 грамм со вкусом курицы">
                 </picture>
@@ -90,7 +102,7 @@
             <li class="catalog__item catalog__item--large">
               <a class="catalog__product-link" href="#">
                 <picture>
-                  <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/cat-energy-pro-1000g-chicken-primary@1x.png 1x, images/cat-energy-pro-1000g-chiken-primary@2x.png 2x">
+                  <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/cat-energy-pro-1000g-chicken-primary@1x.png 1x, images/cat-energy-pro-1000g-chicken-primary@2x.png 2x">
                   <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/cat-energy-pro-1000g-chicken-primary@1x.png 1x, images/cat-energy-pro-1000g-chicken-primary@2x.png 2x">
                   <img class="catalog__product-image catalog__product-image--large" src="images/cat-energy-pro-1000g-chicken-mobile@1x.png" srcset="images/cat-energy-pro-1000g-chicken-mobile@2x.png 2x" width="140" height="107" alt="Корм для котов Cat Energy PRO весом 1000 грамм со вкусом курицы">
                 </picture>
@@ -212,6 +224,7 @@
               </dl>
               <a class="catalog__button-order button button--primary" href="#open-modal-order">Заказать</a>
             </li>
+
             <li class="catalog__item catalog__item--regular">
               <a class="catalog__product-link" href="#">
                 <picture>
@@ -237,9 +250,9 @@
               </dl>
               <a class="catalog__button-order button button--primary" href="#open-modal-order">Заказать</a>
             </li>
+
             <li class="catalog__item catalog__item--show-all">
               <a class="catalog__product-link" href="new-products.html">
-                <img class="catalog__product-image" src="images/products/show-all.jpg" width="30" height="30" alt="Показать все товары">
                 <h3 class="catalog__product-title catalog__product-title--wrap">Показать еще 100500 товаров</h3>
               </a>
               <p class="catalog__description catalog__description--wrap">На самом деле вкусов гораздо больше!</p>
@@ -287,7 +300,7 @@
           </ul>
           <aside class="additional-products__promo promo">
             <h3 class="visually-hidden">Промоакция</h3>
-            <p class="additional-products__promo-description">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="promo__offer">Закажите все и получите чехол для кота в подарок!</p>
           </aside>
         </div>
       </section>
@@ -327,8 +340,8 @@
     <div class="container">
       <h2 class="visually-hidden">Социальные сети</h2>
       <div class="main-footer__logo logo">
-        <a class="logo__link" href="/">
-          <img class="logo__image logo__image--text" width="128" height="24" src="images/logo-text.svg" alt="Логотип интернет-магазина CAT ENERGY">
+        <a class="logo__link" href="/" aria-current="page">
+          <img class="logo__text" width="128" height="24" src="images/logo-text.svg" alt="Логотип интернет-магазина CAT ENERGY">
         </a>
       </div>
       <div class="main-footer__social social">
@@ -336,32 +349,30 @@
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Вконтакте</span>
-              <svg class="social__icon" width="27" height="17"></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Ютуб</span>
-              <svg class="social__icon" width="24" height="19"></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
-              <svg class="social__icon" width="20" height="17"></svg>
             </a>
           </li>
         </ul>
-        <div class="html-academy-logo logo">
-          <span class="visually-hidden">Логотип HTML Academy: интерактивные онлайн-курсы по веб-разработке и программированию</span>
-          <a class="html-academy-logo__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="logo__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="html-academy-logo__image" width="27" height="34" src="images/logo-html-academy.svg" alt="Логотип HTML Academy" aria-hidden="true">
+        <div class="htmlacademy-logo logo">
+          <span class="visually-hidden">HTML Academy: интерактивные онлайн-курсы по веб-разработке и программированию</span>
+          <a class="logo__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="logo__link logo__link--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">Логотип HTML Academy</span>
           </a>
         </div>
       </div>
     </div>
   </footer>
+
   <div class="modal-order" id="open-modal-order"></div>
 </body>
 
