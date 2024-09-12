@@ -15,8 +15,6 @@
 @include font-face("Lato", 400, normal, url("/fonts/lato/Lato-Regular.woff2") format("woff2"));
 @include font-face("Oswald", 400, normal, url("/fonts/oswald/oswaldregular.woff2") format("woff2"));
 
-// /fonts/lato/Lato-Regular.woff2
-
 // Миксин для заголовков
 @mixin title($font-size, $line-height, $color: $title-color-dark) {
   font-family: $title-font;

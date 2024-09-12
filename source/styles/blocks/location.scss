@@ -1,0 +1,26 @@
+.location {
+  max-width: 1440px;
+
+  .location__map {
+    position: relative;
+    width: 320px;
+    height: 362px;
+
+    &::after {
+      @include absolute-center;
+      content: "";
+      position: absolute;
+      width: 57px;
+      height: 53px;
+      background-image: url("../../icons/map-pin.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+  }
+
+  .location__iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
