@@ -7,11 +7,13 @@ $button-primary-bg: #68b738;
 $button-secondary-bg: transparent;
 $button-tertiary-bg: #f2f2f2;
 $button-primary-color: #ffffff;
+$button-primary-color-rgb: rgba(255, 255, 255, 0.3);
 $button-secondary-color: #000000;
 $button-tertiary-color: #444444;
-$button-hover: #5eaa2f;
+$button-hover-bg: #5eaa2f;
+$button-active-bg: #ebebeb;
 
-//Базовая стилизация кнопок
+//Базовая стилизация кнопки: зеленый фон и белый цвет текста
 .button {
   display: inline-block;
   padding: 10px 44px;
@@ -25,47 +27,44 @@ $button-hover: #5eaa2f;
   text-decoration: none;
   text-align: center;
   border: none;
+  box-shadow: none;
   cursor: pointer;
-  transition: background-color 0.4s;
+  transition: background-color 0.4s, color 0.4s, opacity 0.4s;
+
+  &:hover {
+    background-color: $button-hover-bg;
+  }
+
+  &:active {
+    background-color: $button-hover-bg;
+    color: $button-primary-color-rgb;
+  }
 
   //Стили для разных кнопок
 
   &--secondary {
     background-color: $button-secondary-bg;
     color: $button-secondary-color;
-  }
 
-  &--slider-icon {
-    background-color: $button-secondary-bg;
+    &:hover {
+      background-color: $button-secondary-bg;
+      color: $button-secondary-color;
+    }
+
+    &:active {
+      color: $button-secondary-color;
+      opacity: 0.3;
+    }
   }
 
   &--show-all {
     background-color: $button-tertiary-bg;
     color: $button-tertiary-color;
-  }
 
-  // Изменение размера кнопки в зависимости в зависимости от ширины экрана
-
-  @media (max-width: $tablet-width) {
-    width: 280px;
-  }
-
-  // Стили для состояний кнопок
-  &:hover {
-    background-color: $button-hover;
-  }
-
-  &:active {
-    background-color: $button-hover;
-    opacity: 0.8;
-  }
-
-  &--secondary:hover {
-    background-color: $button-secondary-bg;
-  }
-
-  &--secondary:active {
-    background-color: $button-secondary-bg;
-    opacity: 0.3;
+    &:hover,
+    &:active {
+      background-color: $button-active-bg;
+      color: $button-tertiary-color;
+    }
   }
 }

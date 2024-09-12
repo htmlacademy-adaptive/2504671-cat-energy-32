@@ -4,7 +4,13 @@
   max-width: 767px;
   height: 290px;
   min-height: 200px;
-  background-color: $bg-color-brand-rgba;
+  background:
+    linear-gradient(to bottom, $bg-color-brand-rgba 100%, transparent 20%),
+    image-set(url("../../images/bg-cat-promo-mobile-desktop@1x.jpg") 1x,
+    url("../../images/bg-cat-promo-mobile-desktop@2x.jpg") 2x);
+  background-size: 100% 100%, 100% 100%;
+  background-position: center, center;
+  background-repeat: no-repeat;
   color: $brand-color-tertiary;
   font-size: $font-size-s;
   line-height: $line-height-s;

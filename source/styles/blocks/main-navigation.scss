@@ -30,18 +30,5 @@
 
 .main-navigation__toggle {
   @include flex-center;
-
-  &--burger {
-    margin-left: auto;
-    transform-origin: center center;
-    transition: transform 0.3s ease, stroke 0.3s ease;
-
-    &:hover {
-      transform: scale(1.2);  // РАБОТАЕТ!!!
-    }
-
-    &:active path {
-      stroke: $brand-color-primary; // Зеленый цвет // НЕ РАБОТАЕТ!!!
-    }
-  }
+  margin-left: auto;
 }

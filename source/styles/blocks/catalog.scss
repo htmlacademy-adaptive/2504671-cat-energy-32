@@ -20,24 +20,21 @@
 }
 
 .catalog__item {
-  position: relative;
   font-size: $font-size-xs;
   line-height: $line-height-xs;
 }
 
 .catalog__item--show-all {
-  @include flex-center;
-  flex-direction: column;
-  min-height: 208px;
+  min-height: 300px;
+  // text-align: center;
 }
 
 .catalog__item--show-all::before {
-
   content: "";
   width: 30px;
   height: 30px;
-  background-color: $icon-color-primary;
-  mask-image: url("../../icons/stack.svg#plus");
+  display: block;
+  background-image: url("../../icons/stack.svg#plus");
   background-size: contain;
   background-repeat: no-repeat;
 }
