@@ -2,16 +2,19 @@
 
 .main-header {
   position: relative;
-  background-color: $bg-color-primary;
-  display: flex;
-  color: $text-color-primary;
   width: 100%;
-  max-width: 767px;
-  padding: 0 20px;
+  max-width: 320px; // МЕНЯТЬ НА 768/1440 !!!
+  margin: 0 auto;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 14px 20px;
+
 
   .main-header__logo {
-    @include flex-center;
     gap: 56px;
-    max-width: 200px;
+  }
+
+  .main-header__wrapper {
+    @include flex-center;
+    justify-content: space-between;
   }
 }

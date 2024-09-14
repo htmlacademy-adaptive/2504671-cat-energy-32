@@ -2,16 +2,12 @@
   width: 100%;
 }
 
-.additional-products__title {
-  @include title(24px, 24px);
-}
-
 .additional-products__list {
   @include no-list-style;
-  line-height: $line-height-xxs;
+  // line-height: $line-height-xxs;
 }
 
 .additional-products__heading {
-  @include title (16px, 16px, $subtitle-color-dark);
+  // @include title (16px, 16px, $subtitle-color-dark);
   text-transform: uppercase;
 }

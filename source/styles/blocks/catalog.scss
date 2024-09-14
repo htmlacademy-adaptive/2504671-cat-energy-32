@@ -2,12 +2,9 @@
   width: 100%;
 }
 
-.catalog__title {
-  @include title(36px, 36px);
-}
 
 .catalog__product-title {
-  @include title (16px, 20px, $subtitle-color-dark);
+  // @include title (16px, 20px, $subtitle-color-dark);
   text-transform: uppercase;
 
   &--wrap {
@@ -20,8 +17,8 @@
 }
 
 .catalog__item {
-  font-size: $font-size-xs;
-  line-height: $line-height-xs;
+  font-size: 0.86rem;
+  line-height: 1.33;
 }
 
 .catalog__item--show-all {

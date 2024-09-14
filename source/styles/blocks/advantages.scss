@@ -1,24 +1,24 @@
 .advantages {
   width: 100%;
+  padding: 0 20px;
+  padding-bottom: 30px;
 
   .advantages__title {
-    @include title(36px, 40px);
+    @include title(2.57rem, 1.11);
     @include no-margin-padding;
+    margin-bottom: 40px;
   }
 
   .advantages__description {
     @include no-margin-padding;
-    max-width: 767px;
   }
 
   .advantages__list {
     @include no-list-style;
-    @include no-margin-padding;
   }
 
   .advantages__item {
     @include flex-center;
-    justify-content: flex-start;
     gap: 20px;
     margin-bottom: 20px;
 
@@ -26,6 +26,7 @@
       content: "";
       width: 60px;
       height: 60px;
+      padding: 30px;
       background-color: $brand-color-primary;
     }
 
@@ -56,5 +57,9 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+  }
+
+  .advantages__item:last-child {
+    margin-bottom: 0;
   }
 }

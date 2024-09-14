@@ -1,7 +1,8 @@
 .hero {
   width: 100%;
-  max-width: 767px;
-  height: auto;
+  min-height: 480px;
+  margin: 0 auto;
+  padding-top: 10%;
   background:
     linear-gradient(to bottom, $bg-color-brand-rgba 62%, transparent 62%),
     image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
@@ -10,15 +11,29 @@
   background-position: center, top;
   background-repeat: no-repeat;
 
-
   .hero__title {
-    @include title (36px, 36px, $title-color-light);
+    @include title (2.57rem, 1, $title-color-light);
+    @include no-margin-padding;
+    color: $title-color-light;
     text-align: center;
+    margin-bottom: 25px;
+    overflow-wrap: break-word;
   }
 
   .hero__description {
-    @include title (14px, 14p, $title-color-light);
+    @include title (1rem, 1, $title-color-light);
+    @include no-margin-padding;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .hero__image {
+    margin: 0 auto;
+  }
+
+  .hero__button {
+    width: 100%;
+    margin: 0 auto;
   }
 }

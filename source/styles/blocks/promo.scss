@@ -12,8 +12,8 @@
   background-position: center, center;
   background-repeat: no-repeat;
   color: $brand-color-tertiary;
-  font-size: $font-size-s;
-  line-height: $line-height-s;
+  font-size: $font-size-base;
+  line-height: 1.25;
   text-align: center;
 
   &::after {

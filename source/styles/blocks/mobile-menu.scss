@@ -1,0 +1,30 @@
+.mobile-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: $bg-color-primary;
+
+  &:target {
+    display: block;
+    opacity: 1;
+  }
+
+  &--close {
+    display: none;
+  }
+}
+
+// .mobile-menu--close {
+//   display: none;
+// }
+
+// &:target ~ .mobile-menu--open {
+//   opacity: 0;
+// }
+
+// &:target ~ .mobile-menu--close {
+//   opacity: 1;
+// }

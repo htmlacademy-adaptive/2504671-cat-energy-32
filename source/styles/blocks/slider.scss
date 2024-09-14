@@ -35,7 +35,7 @@
   background-color: $slider-color;
   border: none;
   box-shadow: none;
-  transition: border-color 0.3s, background-color 0.3s, opacity 0.3s;
+  transition: all 0.1s ease;
   cursor: pointer;
   z-index: 2;
 

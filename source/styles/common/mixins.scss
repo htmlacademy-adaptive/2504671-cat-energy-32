@@ -20,17 +20,21 @@
   align-items: center;
 }
 
-// Выравнивание по центру Grid
-@mixin grid-center {
-  display: grid;
-  place-items: center; /* Выравнивание по горизонтали и вертикали */
-  height: 100vh;       /* Высота контейнера для демонстрации вертикального выравнивания */
-}
-
 // Абсолютное центрирование элемента
 @mixin absolute-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+// Сетка на основe Flex
+@mixin flex-grid ($columns: 12, $gap: 20px) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+
+  >  * {
+    flex: 1 1 calc(100% / $columns - #{$gap});
+  }
 }

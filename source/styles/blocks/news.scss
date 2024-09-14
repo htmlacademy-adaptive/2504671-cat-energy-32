@@ -3,14 +3,6 @@
   min-width: 280px;
 }
 
-.news__title {
-  @include title(24px, 24px);
-}
-
-.news__description {
-  @include title (16px, 24px);
-}
-
 .news__subscription-email {
   width: 100%;
   padding: 13px;
