@@ -29,7 +29,7 @@
 }
 
 // Сетка на основe Flex
-@mixin flex-grid ($columns: 12, $gap: 20px) {
+@mixin flex-grid ($columns, $gap) {
   display: flex;
   flex-wrap: wrap;
   gap: $gap;
@@ -37,4 +37,11 @@
   >  * {
     flex: 1 1 calc(100% / $columns - #{$gap});
   }
+}
+
+// Сетка на основe Grid
+@mixin css-grid ($columns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
 }

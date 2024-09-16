@@ -1,15 +1,43 @@
 .news {
   width: 100%;
-  min-width: 280px;
-}
+  padding: 20px;
 
-.news__subscription-email {
-  width: 100%;
-  padding: 13px;
+  .news__title {
+    @include no-list-style;
+    @include title (1.71rem, 1);
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 12px;
 
+    &::after {
+      content: "";
+      position: absolute;
+      top: 54%;
+      right: 4%;
+      transform: translateX(25%);
+      width: 45%;
+      height: 2px;
+      background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
+    }
+  }
 
-  &__::placeholder {
-    @include title(20px, 30px, $text-color-primary);
+  .news__description {
+    @include no-list-style;
+    @include title (1.14rem, 1.15, $text-color-primary);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .news__subscription-email {
+    @include title(1.43rem, 1.5,$text-color-primary);
     text-transform: uppercase;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid $border-color-secondary;
+    margin-bottom: 16px;
+  }
+
+  .news__submit-button {
+    width: 100%;
   }
 }

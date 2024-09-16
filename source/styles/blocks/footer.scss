@@ -6,7 +6,7 @@
   margin: 0 auto;
   max-width: 320px; // МЕНЯТЬ НА 768/1440 !!!
   padding: 40px 0;
-  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.1), 1px 0 5px rgba(0, 0, 0, 0.1);
+  background-color: $bg-color-secondary;
 
   .main-footer__logo,
   .main-footer__social {

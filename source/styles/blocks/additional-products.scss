@@ -1,13 +1,87 @@
 .additional-products {
   width: 100%;
-}
+  padding: 0 20px;
 
-.additional-products__list {
-  @include no-list-style;
-  // line-height: $line-height-xxs;
-}
+  .additional-products__title {
+    @include no-list-style;
+    @include title (1.71rem, 1);
+    position: relative;
+    padding: 25px 0 40px;
+    margin-bottom: 14px;
 
-.additional-products__heading {
-  // @include title (16px, 16px, $subtitle-color-dark);
-  text-transform: uppercase;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 36%;
+      right: 0;
+      transform: translateX(60%);
+      width: 12%;
+      height: 2px;
+      background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent 0, $border-color-tertiary 0, $border-color-tertiary 100%, transparent 100%);
+    }
+  }
+
+  .additional-products__list {
+    @include no-list-style;
+    @include css-grid (1, 12px);
+    margin-bottom: 35px;
+
+
+    .additional-products__item {
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .additional-products__item::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent 0, $border-color-tertiary 0, $border-color-tertiary 100%, transparent 100%);
+    }
+  }
+
+  .additional-products__heading {
+    @include title (1.14rem, 1, $subtitle-color-dark);
+    @include no-list-style;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .additional-products__detail {
+    @include css-grid (2, 20px);
+    margin-bottom: 14px;
+
+    .additional-products__label {
+      line-height: 1;
+      text-align: left;
+    }
+
+    .additional-products__price {
+      line-height: 1;
+      text-align: right;
+    }
+  }
+
+  .additional-products__button-order {
+    padding: 10px 50px;
+    min-width: 280px;
+  }
+
+  .additional-products__promo {
+    @include flex-center;
+    align-items: flex-end;
+  }
 }

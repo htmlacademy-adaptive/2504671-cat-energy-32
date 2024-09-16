@@ -52,7 +52,6 @@
     width: 280px;
 
     &::after {
-      // @include absolute-center;
       content: "";
       position: absolute;
       bottom: 0;

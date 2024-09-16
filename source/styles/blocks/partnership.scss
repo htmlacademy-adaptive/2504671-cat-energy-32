@@ -2,19 +2,25 @@
   @include flex-center;
   justify-content: space-between;
   width: 100%;
-  padding: 6px 20px;
-}
+  padding: 20px;
+  background-color: inherit;
 
-.partnership__title {
-  @include title(1.14rem, 1.25, $title-color-dark-secondary);
-  @include no-margin-padding;
-  text-transform: uppercase;
-  text-align: left;
-}
+  &--change-bg {
+    background-color: $bg-color-secondary;
+    margin-bottom: -20px;
+  }
 
-.partnership__contacts {
-  font-style: normal;
-  line-height: 1.43;
-  text-align: right;
-}
+  .partnership__title {
+    @include title(1.14rem, 1.25, $title-color-dark-secondary);
+    @include no-margin-padding;
+    text-transform: uppercase;
+    text-align: left;
+    margin-right: 25px;
+  }
 
+  .partnership__contacts {
+    font-style: normal;
+    line-height: 1.43;
+    text-align: left;
+  }
+}
