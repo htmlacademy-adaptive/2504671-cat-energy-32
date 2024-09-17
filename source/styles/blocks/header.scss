@@ -5,14 +5,31 @@
   width: 100%;
   max-width: 320px; // МЕНЯТЬ НА 768/1440 !!!
   margin: 0 auto;
-  padding: 14px 20px;
 
   .main-header__logo {
+    width: 180px;
     gap: 56px;
   }
 
-  .main-header__wrapper {
+  .main-header__wrapper-mobile {
+    @include css-grid(2, 30px);
+    padding: 14px 20px;
+  }
+
+  .main-header__toggle {
     @include flex-center;
-    justify-content: space-between;
+    justify-content: end;
+    background-color: $bg-color-primary;
+    cursor: pointer;
+    border: none;
   }
 }
+
+// .icon--burger {
+//   display: block;
+// }
+
+// .icon--close {
+//   display: none;
+// }
+

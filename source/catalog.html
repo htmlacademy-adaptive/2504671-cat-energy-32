@@ -16,7 +16,7 @@
 <body class="page__body">
   <div class="page__container">
     <header class="main-header">
-      <div class="main-header__wrapper">
+      <div class="main-header__wrapper-mobile">
         <div class="main-header__logo logo">
           <span class="visually-hidden">Логотип интернет-магазина CAT ENERGY</span>
           <a class="logo__link" href="index.html">
@@ -33,42 +33,39 @@
             </picture>
           </a>
         </div>
-        <!-- Кнопка "бургер", которая открывает меню -->
-        <a class="main-navigation__toggle" href="#mobile-menu">
-          <span class="visually-hidden">Открыть меню</span>
-          <svg class="main-navigation__icon-burger mobile-menu--open" width="24" height="24" role="img" focusable="false">
+
+        <!-- Кнопка открытия/закрытия мобильного меню -->
+        <button class="main-header__toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <svg class="main-header__icon icon--burger" width="24" height="24" role="img" aria-hidden="true">
             <use href="icons/stack.svg#burger"></use>
           </svg>
-        </a>
-        <!-- Кнопка закрытия меню -->
-        <a class="main-navigation__toggle mobile-menu--close" href="#">
-          <span class="visually-hidden">Закрыть меню</span>
-          <svg class="main-navigation__icon-close" width="18" height="18" role="img" focusable="false">
+          <svg class="main-header__icon icon--close" width="24" height="24" role="img" aria-hidden="true" style="display: none;">
             <use href="icons/stack.svg#close"></use>
           </svg>
-        </a>
+        </button>
       </div>
 
-      <nav class="main-navigation mobile-menu" id="mobile-menu">
+      <nav class="main-navigation mobile-menu mobile-menu--catalog">
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="index.html">
+            <a class="main-navigation__link mobile-menu__link--catalog" href="index.html">
               Главная
             </a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="/" aria-current="page">
+            <a class="main-navigation__link mobile-menu__link--catalog" href="/" aria-current="page">
               Каталог продукции
             </a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="program-selection.html">
+            <a class="main-navigation__link mobile-menu__link--catalog" href="program-selection.html">
               Подбор программы
             </a>
           </li>
         </ul>
       </nav>
     </header>
+
     <main class="main-container">
       <section class="catalog">
         <!-- <div class="container"> -->
