@@ -14,8 +14,16 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  display: block; /* Убираем лишние отступы снизу, которые могут появляться у inline-элементов */
+  display: block;
 }
+
+picture img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 
 a {
   color: inherit;

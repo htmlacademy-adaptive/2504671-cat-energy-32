@@ -16,54 +16,58 @@
 <body class="page__body">
   <div class="page__container">
     <header class="main-header">
-      <div class="main-header__wrapper-mobile">
-        <div class="main-header__logo logo">
-          <span class="visually-hidden">Логотип интернет-магазина CAT ENERGY</span>
-          <a class="logo__link" href="index.html">
-            <picture>
-              <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-cat-desktop.svg">
-              <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-cat-tablet.svg">
-              <img class="logo__img" width="33" height="38" src="images/logo-cat-mobile.svg" alt="Логотип интернет-магазина CAT ENERGY" aria-hidden="true">
-            </picture>
-          </a>
-          <a class="logo__link" href="index.html">
-            <picture>
-              <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
-              <img class="logo__text" width="101" height="18" src="images/logo-text.svg" alt="Логотип интернет-магазина CAT ENERGY" aria-hidden="true">
-            </picture>
-          </a>
+
+      <div class="main-header__wrapper-common">
+        <div class="main-header__wrapper-mobile">
+          <div class="main-header__logo logo">
+            <span class="visually-hidden">Логотип интернет-магазина CAT ENERGY</span>
+            <a class="logo__link" href="index.html">
+              <picture>
+                <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-cat-desktop.svg">
+                <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-cat-tablet.svg">
+                <img class="logo__img" width="33" height="38" src="images/logo-cat-mobile.svg" alt="Логотип интернет-магазина CAT ENERGY" aria-hidden="true">
+              </picture>
+            </a>
+            <a class="logo__link" href="index.html">
+              <picture>
+                <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
+                <img class="logo__text" width="101" height="18" src="images/logo-text.svg" alt="Логотип интернет-магазина CAT ENERGY" aria-hidden="true">
+              </picture>
+            </a>
+          </div>
+
+          <!-- Кнопка открытия/закрытия мобильного меню -->
+          <button class="main-header__toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+            <svg class="main-header__icon icon--burger" width="24" height="24" role="img" aria-hidden="true">
+              <use href="icons/stack.svg#burger"></use>
+            </svg>
+            <svg class="main-header__icon icon--close" width="24" height="24" role="img" aria-hidden="true" style="display: none;">
+              <use href="icons/stack.svg#close"></use>
+            </svg>
+          </button>
         </div>
 
-        <!-- Кнопка открытия/закрытия мобильного меню -->
-        <button class="main-header__toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
-          <svg class="main-header__icon icon--burger" width="24" height="24" role="img" aria-hidden="true">
-            <use href="icons/stack.svg#burger"></use>
-          </svg>
-          <svg class="main-header__icon icon--close" width="24" height="24" role="img" aria-hidden="true" style="display: none;">
-            <use href="icons/stack.svg#close"></use>
-          </svg>
-        </button>
+        <nav class="main-navigation site-menu site-menu--catalog">
+          <ul class="main-navigation__list site-menu__list">
+            <li class="main-navigation__item site-menu__item">
+              <a class="main-navigation__link site-menu__link site-menu__link--active site-menu__link--catalog" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-navigation__item site-menu__item">
+              <a class="main-navigation__link site-menu__link site-menu__link--catalog" href="/" aria-current="page">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="main-navigation__item site-menu__item">
+              <a class="main-navigation__link site-menu__link site-menu__link--catalog" href="program-selection.html">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
 
-      <nav class="main-navigation mobile-menu mobile-menu--catalog">
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <a class="main-navigation__link mobile-menu__link--catalog" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link mobile-menu__link--catalog" href="/" aria-current="page">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link mobile-menu__link--catalog" href="program-selection.html">
-              Подбор программы
-            </a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="main-container">
@@ -335,6 +339,7 @@
         </address>
         <!-- </div> -->
       </section>
+
       <section class="location">
         <h2 class="visually-hidden">Наши контакты и местоположение</h2>
         <figure class="location__map">

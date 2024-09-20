@@ -1,6 +1,5 @@
 .additional-products {
   width: 100%;
-  padding: 0 20px;
 
   .additional-products__title {
     @include no-list-style;
@@ -77,6 +76,7 @@
 
   .additional-products__button-order {
     padding: 10px 50px;
+    width: 100%;
     min-width: 280px;
   }
 

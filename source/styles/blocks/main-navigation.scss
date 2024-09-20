@@ -1,31 +1,43 @@
 .main-navigation {
-  display: none;
   width: 100%;
-  min-width: 320px;  // 1440 !!!
-}
 
-.main-navigation__list {
-  @include no-list-style;
-  @include no-margin-padding;
-  width: 100%;
-}
-
-.main-navigation__item {
-  @include title (1.43rem, 1);
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.main-navigation__link {
-  display: block;
-  padding: 24px 30px;
-  border-top: 1px solid $border-color-tertiary;
-
-  &:hover {
-    color: $button-tertiary-color;
+  .main-navigation__list {
+    @include no-list-style;
+    @include no-margin-padding;
+    width: 100%;
   }
 
-  &:active {
-    opacity: 0.3;
+  .main-navigation__item {
+    @include title (1.43rem, 1);
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {              //ПЛАНШЕТ
+      @include title (1.13rem, 1.33);
+    }
+
+    @media (min-width: 1440px) {              //ДЕСКТОП
+      @include title (1.25rem, 1.5);
+    }
+  }
+
+  .main-navigation__link {
+    position: relative;
+    display: block;
+    padding: 24px 30px;
+    border-top: 1px solid $border-color-tertiary;
+
+    &:hover {
+      color: $button-tertiary-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @media (min-width: 768px) {              //ПЛАНШЕТ, DESKTOP
+      padding: 12px 0;
+      border: none;
+    }
   }
 }

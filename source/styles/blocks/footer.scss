@@ -3,9 +3,10 @@
   grid-template-rows: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
+  min-width: 360px;
+  max-width: 1440px;
   margin: 0 auto;
-  max-width: 320px; // МЕНЯТЬ НА 768/1440 !!!
-  padding: 40px 0;
+  padding: 40px 20px;
   background-color: $bg-color-secondary;
 
   .main-footer__logo,
@@ -20,4 +21,22 @@
   @include flex-center;
   gap: 140px;
   padding: 0 20px;
+}
+
+@media (min-width: 768px) {     // TABLET
+  .main-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 55px 30px;
+
+    .main-footer__logo,
+    .main-footer__social {
+      border-bottom: none;
+    }
+
+    .htmlacademy-logo {
+      width: 100%;
+      gap: 20px;
+    }
+  }
 }

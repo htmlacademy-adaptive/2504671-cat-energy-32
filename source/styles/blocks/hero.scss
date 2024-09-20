@@ -1,39 +1,77 @@
-.hero {
-  width: 100%;
-  min-height: 480px;
-  margin: 0 auto;
-  padding-top: 10%;
-  background:
-    linear-gradient(to bottom, $bg-color-brand-rgba 62%, transparent 62%),
-    image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
-    url("../../images/bg-cat-mobile@2x.jpg") 2x);
-  background-size: 100% 100%, 100% 62%;
-  background-position: center, top;
-  background-repeat: no-repeat;
+@media (max-width: 767px) {    // МОБИЛЬНЫЙ
+  .hero {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    place-items: center;
+    width: 100%;
+    min-height: 38vh;
+    padding: 20px 25px 0;
+    background:
+      linear-gradient(to bottom, $bg-color-brand-rgba 62%, transparent 62%),
+      image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
+      url("../../images/bg-cat-mobile@2x.jpg") 2x);
+    background-size: cover, 100% 62%;
+    background-position: center, top;
+    background-repeat: no-repeat;
+
+    .hero__title {
+      @include title (2.57rem, 1, $title-color-light);
+      @include no-margin-padding;
+      text-align: center;
+      margin-bottom: 25px;
+      overflow-wrap: break-word;
+    }
+
+    .hero__description {
+      @include title (1rem, 1, $title-color-light);
+      @include no-margin-padding;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .hero__image {
+      margin: 0 auto;
+    }
+
+    .hero__button {
+      min-width: 280px;
+    }
+  }
+}
+
+@media (min-width: 768px) {  // ПЛАНШЕТ
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    padding: 15px 30px 0;
+    background-color: $bg-color-primary;
+  }
 
   .hero__title {
-    @include title (2.57rem, 1, $title-color-light);
+    @include title (3.75rem, 1, $text-color-secondary);
     @include no-margin-padding;
-    color: $title-color-light;
-    text-align: center;
-    margin-bottom: 25px;
+    max-width: 80%;
+    text-align: left;
+    padding-left: 60px;
+    margin-bottom: 40px;
     overflow-wrap: break-word;
   }
 
   .hero__description {
-    @include title (1rem, 1, $title-color-light);
+    @include title (1.25rem, 1, $text-color-secondary);
     @include no-margin-padding;
-    text-align: center;
+    text-align: left;
+    padding-left: 60px;
     text-transform: uppercase;
-    margin-bottom: 30px;
-  }
-
-  .hero__image {
-    margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   .hero__button {
-    width: 100%;
-    margin: 0 auto;
+    position: absolute;
+    top: 30%;
+    left: 11%;
   }
 }
+

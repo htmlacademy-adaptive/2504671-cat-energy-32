@@ -1,8 +1,7 @@
 .examples {
   width: 100%;
-  margin: 0 auto;
   background-color: $bg-color-tertiary;
-  padding: 25px 20px 20px;
+  padding: 25px 35px;
 
   .examples__title {
     @include title(2.57rem, 1.11);
@@ -12,6 +11,8 @@
 
   .examples__description {
     @include no-margin-padding;
+    text-align: left;
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -30,7 +31,7 @@
     @include flex-center;
     flex-direction: column;
     gap: 15px;
-    width: 124px;
+    min-width: 124px;
     height: 70px;
     border: 1px solid $border-color-secondary;
     border-radius: 3px;
@@ -47,10 +48,13 @@
     width: 87px;
     font-size: 0.86rem;
     line-height: 1;
-    background-color: $bg-color-tertiary;
     text-transform: lowercase;
     overflow-wrap: break-word;
     padding: 0 15px;
+
+    @media (max-width: 767px) {
+      background-color: $bg-color-tertiary;
+    }
   }
 
   .examples__outcome {
@@ -65,8 +69,62 @@
     display: block;
     margin: 0 auto;
     width: 280px;
-    max-width: 560px;
-    height: 256px;
-    max-height: 512px;
+    min-height: 256px;
+  }
+}
+
+@media (min-width: 768px) {    // TABLET
+  .examples {
+    width: 100%;
+    background: linear-gradient(to top, $bg-color-tertiary 43%, $bg-color-primary  43%);
+
+    .examples__title {
+      @include title(3.75rem, 1);
+      margin-bottom: 60px;
+    }
+
+    .examples__description {
+      @include no-margin-padding;
+      margin-bottom: 60px;
+    }
+
+    .examples__list-wrapper {
+      @include flex-center;
+      gap: 167px;
+      margin-bottom: 100px;
+
+      .examples__list {
+        max-width: 394px;
+        gap: 43px;
+      }
+
+      .examples__item {
+        min-width: 162px;
+        gap: 10px;
+      }
+
+      .examples__number {
+        @include title(1.88rem, 1.23);
+        padding-top: 20px;
+      }
+
+      .examples__detail {
+        width: auto;
+        padding: 0 10px;
+        background-color: $bg-color-primary;
+      }
+
+      .examples__outcome {
+        @include title(1.25rem, 1);
+        min-width: 174px;
+        text-align: right;
+      }
+    }
+
+    .examples__gallery {
+      width: 560px;
+      min-height: 512px;
+      margin-bottom: 70px;
+    }
   }
 }
