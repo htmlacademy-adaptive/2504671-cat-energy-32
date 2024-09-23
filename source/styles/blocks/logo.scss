@@ -1,6 +1,5 @@
 .logo {
-  display: flex;
-  gap: 20px;
+  @include flex-center;
 }
 
 .logo__link:hover .logo__text,
@@ -33,12 +32,8 @@
   background-repeat: no-repeat;
   transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: $color-hover-secondary;
-  }
-
+  &:hover,
   &:active {
     background-color: $color-hover-secondary;
-    opacity: 0.6;
   }
 }

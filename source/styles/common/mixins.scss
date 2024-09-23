@@ -4,7 +4,7 @@
 @mixin no-list-style {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 // Сброс отступов и полей
@@ -13,7 +13,7 @@
   padding: 0;
 }
 
-// Выравнивание по центру
+// Выравнивание по центру Flex
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -26,4 +26,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+// Сетка на основe Flex
+@mixin flex-grid ($columns, $gap) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+
+  >  * {
+    flex: 1 1 calc(100% / $columns - #{$gap});
+  }
+}
+
+// Сетка на основe Grid
+@mixin css-grid ($columns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
 }

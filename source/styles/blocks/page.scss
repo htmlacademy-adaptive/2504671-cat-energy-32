@@ -1,22 +1,26 @@
-// Sticky footer
+// Sticky footer и общие стили
 
 .page {
   height: 100%;
+  font-size: $font-size-mobile; //14px
+  line-height: $line-height-mobile; // 1.29 или 18px
 
-  font-family: $primary-font;
-  font-weight: 400;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $text-color-primary;
-  background-color: $bg-color-primary;
-}
-
-.page__container {
-  flex-grow: 1;
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-base; //16px
+    line-height: $line-height-base; // 1.5 или 24px
+  }
 }
 
 .page__body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: $primary-font;
+  background-color: $bg-color-primary;
+  color: $text-color-primary;
+}
+
+.page__container {
+  flex-grow: 1;
 }

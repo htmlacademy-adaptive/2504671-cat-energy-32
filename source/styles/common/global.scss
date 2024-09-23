@@ -14,8 +14,16 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  display: block; /* Убираем лишние отступы снизу, которые могут появляться у inline-элементов */
+  display: block;
 }
+
+picture img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 
 a {
   color: inherit;
@@ -23,9 +31,31 @@ a {
   transition: color 0.3s;
 }
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 iframe {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border: none;
   display: block;
 }
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+dd {
+  margin-left: 0;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+}
+

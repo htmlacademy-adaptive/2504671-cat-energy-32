@@ -7,14 +7,16 @@
 @import "./common/mixins.scss";
 @import "./common/helpers.scss";
 
+
 /* BLOCKS */
 @import "./blocks/page.scss";
+@import "./blocks/main-container.scss";
 @import "./blocks/header.scss";
 @import "./blocks/footer.scss";
 @import "./blocks/buttons.scss";
 @import "./blocks/logo.scss";
 @import "./blocks/main-navigation.scss";
-@import "./blocks/mobile-menu.scss";
+@import "./blocks/site-menu.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/programs.scss";
 @import "./blocks/advantages.scss";
@@ -30,10 +32,6 @@
 
 /* MODAL */
 @import "./modal/modal-order.scss";
-
-/* LAYOUT */
-@import "./layout/container.scss";
-@import "./layout/spacing.scss";
 
 /* PAGES */
 @import "./pages/404.scss";

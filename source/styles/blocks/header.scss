@@ -1,17 +1,83 @@
 /* СТИЛИ ДЛЯ ШАПКИ САЙТА */
 
-.main-header {
-  position: relative;
-  background-color: $bg-color-primary;
-  display: flex;
-  color: $text-color-primary;
-  width: 100%;
-  max-width: 767px;
-  padding: 0 20px;
+@media (max-width: 767px) {    // МОБИЛЬНЫЙ
+  .main-header {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 14px 20px;
+
+    .main-header__logo {
+      width: 180px;
+      gap: 56px;
+    }
+
+    .main-header__wrapper-mobile {
+      @include css-grid(2, 40px);
+      padding: 0 20px;
+    }
+
+    .main-header__toggle {
+      @include flex-center;
+      justify-content: end;
+      background-color: $bg-color-primary;
+      cursor: pointer;
+      border: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {         // ПЛАНШЕТ
+  .main-header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px 35px;
+    margin-bottom: 15px;
+  }
+
+  .main-header__wrapper-common {
+    @include flex-grid (2, 10px);
+    flex-wrap: nowrap;
+    width: 92%;
+    margin: 0 auto;
+  }
 
   .main-header__logo {
-    @include flex-center;
-    gap: 56px;
-    max-width: 200px;
+    width: 174px;
+    gap: 13px;
+  }
+
+  .main-header__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {      // DESKTOP
+  .main-header-hero__wrapper {
+    position: relative;
+    max-height: 700px;
+    margin-bottom: 80px;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(to right, transparent 50%, $bg-color-brand-rgba 50%),
+        image-set(url("../../images/bg-cat-desktop\ @1x.jpg") 1x, url("../../images/bg-cat-desktop\ @2x.jpg") 2x);
+      z-index: 1;
+      background-size: 100% 100%, 50% 100%;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .main-header__wrapper-common {
+    position: relative;
   }
 }

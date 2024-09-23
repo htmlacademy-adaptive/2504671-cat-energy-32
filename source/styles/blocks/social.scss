@@ -1,10 +1,12 @@
 .social {
   width: 100%;
+  margin: 0 auto;
 
   .social__list {
     @include no-list-style;
-    display: flex;
-    gap: 20px;
+    @include flex-center;
+    justify-content: space-between;
+    width: 132px;
     margin: 0 auto;
   }
 }

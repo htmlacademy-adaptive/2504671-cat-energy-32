@@ -9,15 +9,12 @@ $secondary-font: "Oswald", "Arial Narrow", sans-serif;
 $title-font: "Oswald", "Arial Narrow", sans-serif;
 
 // Размер шрифта
-$font-size-base: 14px;
-$font-size-xs: 12px;
-$font-size-s: 16px;
+$font-size-mobile: 14px;
+$font-size-base: 16px;
 
 // Высота строки
-$line-height-base: 18px;
-$line-height-xxs: 14px;
-$line-height-xs: 16px;
-$line-height-s: 20px;
+$line-height-mobile: 1.29; //18px
+$line-height-base: 1.5; //24px
 
 // Цвет текста
 $text-color-primary: #444444;
@@ -67,6 +64,6 @@ $color-active-primary: #6b6b6b;
 $color-active-secondary: #5eaa2f;
 
 // Размеры экрана
-$mobile-width-only: 767px;
+$mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;

@@ -1,47 +1,78 @@
 .main-navigation {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 999;
-}
 
-.main-navigation__list {
-  @include no-list-style;
-  @include no-margin-padding;
-  width: 100%;
-}
+  .main-navigation__list {
+    @include no-list-style;
+    @include no-margin-padding;
+    width: 100%;
+  }
 
-.main-navigation__item {
-  @include title (20px, 20px, $title-color-dark);
-  text-transform: uppercase;
-  text-align: center;
-}
+  .main-navigation__item {
+    @include title (1.43rem, 1);
+    text-align: center;
+    text-transform: uppercase;
 
-.main-navigation__link {
-  display: block;
-  width: 100%;
-  padding: 22px 50px 24px;
-  border-top: 1px solid $border-color-tertiary;
-  border-bottom: 1px solid $border-color-tertiary;
-}
-
-.main-navigation__toggle {
-  @include flex-center;
-
-  &--burger {
-    margin-left: auto;
-    transform-origin: center center;
-    transition: transform 0.3s ease, stroke 0.3s ease;
-
-    &:hover {
-      transform: scale(1.2);  // РАБОТАЕТ!!!
+    @media (min-width: 768px) {              //ПЛАНШЕТ
+      @include title (1.13rem, 1.33);
     }
 
-    &:active path {
-      stroke: $brand-color-primary; // Зеленый цвет // НЕ РАБОТАЕТ!!!
+    @media (min-width: 1440px) {              //ДЕСКТОП
+      @include title (1.25rem, 1.5, $bg-color-primary);
+
+      &--dark {
+        @include title (1.25rem, 1.5);  // Темный шрифт на каталоге на 1440px
+      }
+
+      // .main-navigation .main-navigation__item--dark + .main-navigation__link:hover {
+      //   color: $title-color-dark;
+      //   opacity: 0.6;
+      // }
+      // .main-navigation .main-navigation__item--dark + .main-navigation__link:hover {
+      //   color: $title-color-dark;
+      //   opacity: 0.6;
+      // }
+    }
+  }
+
+  .main-navigation__link {
+    position: relative;
+    display: block;
+    padding: 24px 30px;
+    border-top: 1px solid $border-color-tertiary;
+
+    &:hover {
+      color: $button-tertiary-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @media (min-width: 768px) {     //ПЛАНШЕТ
+      padding: 12px 0;
+      border: none;
+    }
+  }
+}
+
+@media (min-width: 1440px) {   // DESKTOP
+  .main-navigation {
+    position: absolute;
+    z-index: 2;
+
+    .main-navigation__link {
+      &:hover {
+        color: $title-color-light;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    } // HOVER  на странице каталоге не работает корректно, цвет белый
+    .main-navigation__item--dark + .site-menu__link--active-dark {
+      &:hover {
+        color: $title-color-dark;
+      }
     }
   }
 }

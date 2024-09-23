@@ -1,106 +1,77 @@
 .slider {
   position: relative;
   width: 100%;
-  height: 100%;
-  margin: 0 auto;
 
-  .slider__list {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-size: 280px 100%;
-  }
-
-  .slider__item--bg,
-  .slider__item--fg {
+  .slider__img-before,
+  .slider__img-after {
     position: absolute;
     top: 0;
     left: 0;
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
-  .slider__item--bg {
+  .slider__img-before {
     z-index: 1;
     clip-path: inset(0 50% 0 0);
   }
 
-  .slider__item--fg {
+  .slider__img-after {
     z-index: 2;
     clip-path: inset(0 0 0 50%);
   }
 }
 
-.slider__control input {
+.slider__control {
   @include absolute-center;
+  @include no-margin-padding;
   position: absolute;
-  appearance: none;
-  height: 0;
-  z-index: 3;
-
-  &::-webkit-slider-thumb {
-    appearance: none;
-  }
-}
-
-.slider__control input::before {
-  @include absolute-center;
-  position: absolute;
-  content: "";
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  border: 2px solid $slider-color;
-  transition: border-color 0.3s, opacity 0.3s;
-  z-index: 3;
-}
-
-.slider__control input:hover::before {
-  border: 2px solid $color-hover-secondary;
-}
-
-.slider__control input:active::before {
-  border: 2px solid $color-hover-secondary;
-  opacity: 0.6;
-}
-
-.slider__control input::after {
-  @include absolute-center;
-  position: absolute;
-  content: "";
-  width: 24px;
-  height: 24px;
-  background-color: $slider-color;
-  mask-image: url("../../icons/stack.svg#slider-arrows");
-  mask-repeat: none;
-  mask-position: center;
-  mask-size: contain;
-  transition: background-color 0.3s, opacity 0.3s;
-  z-index: 3;
-}
-
-.slider__control--thumb {
-  @include absolute-center;
-  content: "";
-  position: absolute;
+  display: block;
   width: 4px;
-  height: 256px;
+  height: 100%;
   border-radius: 3px;
   background-color: $slider-color;
+  border: none;
+  box-shadow: none;
+  transition: all 0.1s ease;
   cursor: pointer;
-  transition: background-color 0.3s, opacity 0.3s;
-  z-index: 2;
-}
+  z-index: 3;
 
-.slider__control input:hover::after,
-.slider__control--thumb:hover {
-  background-color: $color-hover-secondary;
-}
+  &::after {
+    @include absolute-center;
+    content: "";
+    width: 24px;
+    height: 18px;
+    background-color: $slider-color;
+    mask-image: url("../../icons/stack.svg#slider-arrows");
+    mask-repeat: none;
+    mask-position: center;
+    mask-size: contain;
+  }
 
-.slider__control input:active::after,
-.slider__control--thumb:active {
-  background-color: $color-hover-secondary;
-  opacity: 0.6;
+  &::before {
+    @include absolute-center;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid $slider-color;
+  }
+
+  &:hover,
+  &:hover::before {
+    border: 2px solid $color-hover-secondary;
+  }
+
+  &:hover::after {
+    background-color: $color-hover-secondary;
+  }
+
+  &:active,
+  &:active::after,
+  &:active::before {
+    opacity: 0.6;
+  }
 }
