@@ -61,5 +61,9 @@
     .site-menu__link--active::after {
       background: $title-color-light;
     }
+
+    .site-menu__link--active-dark::after {
+      background: $brand-color-primary;
+    }
   }
 }

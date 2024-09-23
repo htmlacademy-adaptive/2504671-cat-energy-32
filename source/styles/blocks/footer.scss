@@ -17,7 +17,8 @@
 }
 
 .htmlacademy-logo {
-  @include flex-center;
+  display: flex;
+  justify-content: center;
   gap: 140px;
   padding: 0 20px;
 }

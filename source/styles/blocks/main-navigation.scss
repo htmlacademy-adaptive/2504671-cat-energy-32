@@ -18,6 +18,15 @@
 
     @media (min-width: 1440px) {              //ДЕСКТОП
       @include title (1.25rem, 1.5, $bg-color-primary);
+
+      &--dark {
+        @include title (1.25rem, 1.5);  // Темный шрифт на каталоге на 1440px
+      }
+
+      // .main-navigation .main-navigation__item--dark + .main-navigation__link:hover {
+      //   color: $title-color-dark;
+      //   opacity: 0.6;
+      // }
     }
   }
 
@@ -42,7 +51,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1440px) {   // DESKTOP
   .main-navigation {
     position: absolute;
     z-index: 2;
@@ -54,6 +63,11 @@
 
       &:active {
         opacity: 0.3;
+      }
+    } // HOVER  на странице каталоге не работает корректно, цвет белый
+    .main-navigation__item--dark + .site-menu__link--active-dark {
+      &:hover {
+        color: $title-color-dark;
       }
     }
   }

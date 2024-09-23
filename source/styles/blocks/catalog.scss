@@ -1,5 +1,6 @@
 .catalog {
   width: 100%;
+  padding: 0 20px;
 
   .catalog__title {
     @include title (2.57rem, 1, $subtitle-color-dark);
@@ -123,4 +124,51 @@
     }
   }
 }
+
+@media (min-width: 768px) {  // TABLET
+  .catalog {
+    padding: 0 30px;
+
+    .catalog__title {
+      @include title (3.75rem, 1, $subtitle-color-dark);
+      margin-bottom: 84px;
+
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+
+    .catalog__list {
+      @include css-grid (2, 60px);
+      place-items: center center;
+
+      .catalog__item {
+        min-height: 511px;
+        background: linear-gradient(to top, $bg-color-secondary 90%, transparent 90%);
+        padding: 10px 35px 40px;
+        grid-template-areas:
+          "img     ."
+          "details details"
+          "button  button";
+      }
+
+      .catalog__product-image {
+        display: inline-block;
+        grid-column: span 3;
+      }
+
+      .catalog__button-order {
+        max-height: 40px;
+        align-self: end;
+      }
+    }
+  }
+}
+
+// @media (min-width: 1440px) {  // DESKTOP
+//   .catalog {
+//     padding: 0 110px;
+//   }
+// }
 

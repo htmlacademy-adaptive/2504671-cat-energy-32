@@ -37,6 +37,11 @@
     gap: 40%;
     margin: 0 auto;
 
+    &--change-bg {
+      width: 100%;
+      padding: 60px 70px;
+    }
+
     .partnership__title {
       @include title(1.25rem, 1.3, $title-color-dark-secondary);
       margin: 0;

@@ -49,17 +49,17 @@
 
         <nav class="main-navigation site-menu site-menu--catalog">
           <ul class="main-navigation__list site-menu__list">
-            <li class="main-navigation__item site-menu__item">
-              <a class="main-navigation__link site-menu__link site-menu__link--active site-menu__link--catalog" href="index.html">
+            <li class="main-navigation__item main-navigation__item--dark site-menu__item">
+              <a class="main-navigation__link site-menu__link site-menu__link--catalog" href="index.html">
                 Главная
               </a>
             </li>
-            <li class="main-navigation__item site-menu__item">
-              <a class="main-navigation__link site-menu__link site-menu__link--catalog" href="/" aria-current="page">
+            <li class="main-navigation__item main-navigation__item--dark site-menu__item">
+              <a class="main-navigation__link site-menu__link site-menu__link--active site-menu__link--active-dark site-menu__link--catalog" href="/" aria-current="page">
                 Каталог продукции
               </a>
             </li>
-            <li class="main-navigation__item site-menu__item">
+            <li class="main-navigation__item main-navigation__item--dark site-menu__item">
               <a class="main-navigation__link site-menu__link site-menu__link--catalog" href="program-selection.html">
                 Подбор программы
               </a>
@@ -313,7 +313,7 @@
         </ul>
         <aside class="additional-products__promo promo">
           <h3 class="visually-hidden">Промоакция</h3>
-          <p class="promo__offer">Закажите все и получите чехол для кота в подарок!</p>
+          <p class="promo__offer">Закажите все и&nbspполучите чехол для кота в подарок!</p>
         </aside>
         <!-- </div> -->
       </section>
@@ -330,23 +330,26 @@
         <!-- </div> -->
       </section>
 
-      <section class="partnership partnership--change-bg">
-        <!-- <div class="partnership-wrapper"> -->
-        <h2 class="partnership__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="partnership__contacts">
-          <span class="partnership__contact">ул. Большая Конюшенная, д. 19/8</span>
-          <span class="partnership__contact">Санкт-Петербург</span>
-        </address>
-        <!-- </div> -->
-      </section>
+      <div class="partnership__wrapper">
+        <section class="partnership partnership--change-bg">
 
-      <section class="location">
-        <h2 class="visually-hidden">Наши контакты и местоположение</h2>
-        <figure class="location__map">
-          <figcaption class="visually-hidden">Вы можете найти нас по адресу: ул. Большая Конюшенная, д. 19/8, г. Санкт-Петербург, индекс 19186, Россия.</figcaption>
-          <iframe class="location__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625719796!2d30.3204724769766!3d59.93871916209394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sch!4v1722951569188!5m2!1sru!2sch" width="320" height="326" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </figure>
-      </section>
+          <h2 class="partnership__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <address class="partnership__contacts">
+            <span class="partnership__contact">ул. Большая Конюшенная, д. 19/8</span>
+            <span class="partnership__contact">Санкт-Петербург</span>
+          </address>
+
+        </section>
+
+        <section class="location">
+          <h2 class="visually-hidden">Наши контакты и местоположение</h2>
+          <figure class="location__map">
+            <figcaption class="visually-hidden">Вы можете найти нас по адресу: ул. Большая Конюшенная, д. 19/8, г. Санкт-Петербург, индекс 19186, Россия.</figcaption>
+            <iframe class="location__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625719796!2d30.3204724769766!3d59.93871916209394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sch!4v1722951569188!5m2!1sru!2sch" width="320" height="326" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+        </section>
+      </div>
+
     </main>
   </div>
 
@@ -379,7 +382,7 @@
       </ul>
     </div>
 
-    <div class="htmlacademy-logo logo">
+    <div class="htmlacademy-logo">
       <span class="visually-hidden">HTML Academy: интерактивные онлайн-курсы по веб-разработке и программированию</span>
       <a class="logo__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       <a class="logo__link logo__link--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
