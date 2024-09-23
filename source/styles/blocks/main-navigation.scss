@@ -17,7 +17,7 @@
     }
 
     @media (min-width: 1440px) {              //ДЕСКТОП
-      @include title (1.25rem, 1.5);
+      @include title (1.25rem, 1.5, $bg-color-primary);
     }
   }
 
@@ -35,9 +35,26 @@
       opacity: 0.3;
     }
 
-    @media (min-width: 768px) {              //ПЛАНШЕТ, DESKTOP
+    @media (min-width: 768px) {     //ПЛАНШЕТ
       padding: 12px 0;
       border: none;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-navigation {
+    position: absolute;
+    z-index: 2;
+
+    .main-navigation__link {
+      &:hover {
+        color: $title-color-light;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
   }
 }

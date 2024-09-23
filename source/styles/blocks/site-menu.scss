@@ -32,7 +32,7 @@
   }
 }
 
-@media (min-width: 768px) {          //ПЛАНШЕТ, ДЕСКТОП
+@media (min-width: 768px) {          //ПЛАНШЕТ
   .site-menu {
     display: block;
     min-width: 480px;
@@ -52,6 +52,14 @@
       left: 0;
       height: 2px;
       background: $brand-color-primary;
+    }
+  }
+}
+
+@media (min-width: 1440px) {  //DESKTOP
+  .site-menu {
+    .site-menu__link--active::after {
+      background: $title-color-light;
     }
   }
 }

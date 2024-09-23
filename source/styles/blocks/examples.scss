@@ -68,14 +68,13 @@
     position: relative;
     display: block;
     margin: 0 auto;
-    width: 280px;
+    min-width: 280px;
     min-height: 256px;
   }
 }
 
 @media (min-width: 768px) {    // TABLET
   .examples {
-    width: 100%;
     background: linear-gradient(to top, $bg-color-tertiary 43%, $bg-color-primary  43%);
 
     .examples__title {
@@ -88,9 +87,21 @@
       margin-bottom: 60px;
     }
 
+    .examples__gallery {
+      min-width: 560px;
+      max-height: 512px;
+      margin-bottom: 70px;
+
+      .examples__gallery-list {
+        min-width: 560px;
+        min-height: 512px;
+      }
+    }
+
     .examples__list-wrapper {
       @include flex-center;
-      gap: 167px;
+      // gap: 167px;
+      justify-content: space-between;
       margin-bottom: 100px;
 
       .examples__list {
@@ -116,15 +127,47 @@
 
       .examples__outcome {
         @include title(1.25rem, 1);
-        min-width: 174px;
-        text-align: right;
+        @include flex-grid (1, 9);
+        justify-content: flex-end;
+        max-width: 174px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {   // DESKTOP
+  .examples {
+    @include css-grid (2, 94px);
+    background: linear-gradient(to top, $bg-color-tertiary 80%, $bg-color-primary  80%);
+    padding: 0 110px;
+    margin-bottom: -80px;
+
+    .examples__title {
+      margin-bottom: 146px;
+    }
+
+    .examples__description {
+      max-width: 77%;
+      text-align: left;
+      margin-bottom: 70px;
+    }
+
+    .examples__list-wrapper {
+      flex-direction: column;
+      gap: 55px;
+      width: 70%;
+
+      .examples__outcome {
+        margin-right: auto;
+      }
+
+      .examples__detail {
+        background-color: $bg-color-tertiary;
       }
     }
 
-    .examples__gallery {
-      width: 560px;
-      min-height: 512px;
-      margin-bottom: 70px;
+    .examples__outcome-label {
+      margin-right: 62px;
     }
   }
 }

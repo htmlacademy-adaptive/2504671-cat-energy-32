@@ -1,15 +1,13 @@
 .location {
   width: 100%;
-  height: auto;
-
 
   .location__map {
     position: relative;
 
     &::after {
       @include absolute-center;
-      content: "";
       position: absolute;
+      content: "";
       width: 76px;
       height: 76px;
       background-image: url("../../icons/map-pin.svg");
@@ -18,19 +16,13 @@
       pointer-events: none;
     }
   }
-
-  .location__iframe {
-    width: 100%;
-    height: auto;
-    min-height: 362px;
-  }
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 768px) {      //TABLET
   .location {
     width: 100%;
-
+    height: 35vh;
 
     .location__map::after {
       width: 113px;
@@ -38,7 +30,7 @@
     }
 
     .location__iframe {
-      min-height: 400px;
+      height: 35vh;
     }
   }
 }

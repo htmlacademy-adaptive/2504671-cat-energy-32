@@ -3,8 +3,7 @@
   grid-template-rows: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
-  min-width: 360px;
-  max-width: 1440px;
+  // max-width: 1440px;
   margin: 0 auto;
   padding: 40px 20px;
   background-color: $bg-color-secondary;
@@ -38,5 +37,12 @@
       width: 100%;
       gap: 20px;
     }
+  }
+}
+
+@media (min-width: 1440px) {    //DESKTOP
+  .main-footer {
+    padding: 66px 110px;
+    gap: 10%;
   }
 }
