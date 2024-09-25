@@ -2,32 +2,22 @@
   width: 100%;
   padding: 0 20px;
 
+
   .additional-products__title {
     @include no-list-style;
     @include title (1.71rem, 1);
     position: relative;
-    padding: 25px 0 40px;
-    margin-bottom: 14px;
+    margin-bottom: 36px;
 
     &::after {
       content: "";
       position: absolute;
-      top: 40%;
-      right: 0;
-      transform: translateX(60%);
-      width: 12%;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      width: 4vw;
       height: 2px;
       background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent 0, $border-color-tertiary 0, $border-color-tertiary 100%, transparent 100%);
     }
   }
 
@@ -93,32 +83,24 @@
 @media (min-width: 768px) {     // TABLET
   .additional-products {
     padding: 0 30px;
-    overflow-x: hidden;
 
     .additional-products__title {
       @include title (2rem, 1);
-      padding: 10px 15px;
-      margin-left: 70px;
+      padding: 0 38px;
       margin-bottom: 80px;
 
       &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: 4%;
-        transform: translateX(25%);
-        width: 45vw;
-        height: 2px;
-        background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
+        width: 50vw;
+        left: 55%;
       }
 
       &::before {
         content: "";
         position: absolute;
         top: 50%;
-        left: -20%;
-        transform: translateX(25%);
-        width: 8vw;
+        right: 100%;
+        transform: translateY(-50%);
+        width: 4vw;
         height: 2px;
         background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
       }
@@ -171,24 +153,31 @@
 
 @media (min-width: 1440px) {     // DESKTOP
   .additional-products {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(2, auto);
     padding: 0 110px;
 
     .additional-products__title {
       @include title (2.5rem, 1);
       grid-column: span 2;
-      padding: 10px 0;
-      margin-left: 0;
+      padding: 0;
 
       &::after {
-        width: 62vw;
+        // width: 80vw;
+        width: 100%;
+        left: 35%;
       }
 
       &::before {
-        width: 9vw;
+        // width: 60vw;
+        // left: -75%;
+        width: 65%;
+        left: -70%;
       }
+    }
+
+    .additional-products__wrapper {
+      display: grid;
+      grid-template-rows: repeat(2, auto);
+      grid-template-columns: repeat(2, auto);
     }
 
     .additional-products__list {

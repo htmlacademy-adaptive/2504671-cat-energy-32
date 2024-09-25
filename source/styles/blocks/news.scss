@@ -6,16 +6,15 @@
     @include no-list-style;
     @include title (1.71rem, 1);
     position: relative;
-    padding: 20px 0;
-    margin-bottom: 12px;
+    margin-bottom: 36px;
 
     &::after {
       content: "";
       position: absolute;
       top: 50%;
-      right: 4%;
-      transform: translateX(25%);
-      width: 45%;
+      left: 100%;
+      transform: translateY(-50%);
+      width: 4vw;
       height: 2px;
       background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
     }
@@ -48,25 +47,24 @@
 @media (min-width: 768px) {    // TABLET
   .news {
     padding: 0 30px;
-    overflow-x: hidden;
 
     .news__title {
       @include title (2rem, 1);
-      padding: 10px 15px;
-      margin-left: 70px;
+      padding: 0 38px;
       margin-bottom: 66px;
 
       &::after {
         width: 60vw;
+        left: 40%;
       }
 
       &::before {
         content: "";
         position: absolute;
         top: 50%;
-        left: -20%;
-        transform: translateX(25%);
-        width: 8vw;
+        right: 100%;
+        transform: translateY(-50%);
+        width: 4vw;
         height: 2px;
         background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
       }
@@ -101,17 +99,19 @@
 
     .news__title {
       @include title (2.5rem, 1);
-      padding: 10px;
-      margin: 0;
-      margin-left: -16px;
+      padding: 0;
       margin-bottom: 70px;
 
       &::after {
-        width: 80vw;
+        // width: 90vw;
+        width: 110%;
+        left: 24%;
       }
 
       &::before {
-        width: 10vw;
+        // width: 60vw;
+        width: 70%;
+        left: -75%;
       }
     }
 

@@ -34,7 +34,8 @@
 
 @media (min-width: 768px) { // TABLET
   .promo {
-    background-size: 100% 200%;
+    background-size: 100% 300%;
+    background-position: center center, center -233px;
 
     .promo__offer {
       min-width: 240px;
@@ -53,6 +54,8 @@
 @media (min-width: 1440px) {
   .promo {
     background-size: 100% 100%, cover;
+    background-position: center center;
+
     width: 100%;
     min-height: 288px;
 
@@ -65,6 +68,7 @@
 
       &::before {
         @include absolute-center;
+        top: 30%;
       }
     }
   }

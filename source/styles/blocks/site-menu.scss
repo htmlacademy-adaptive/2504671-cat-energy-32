@@ -1,13 +1,15 @@
 
 @media (max-width: 767px) {
   .site-menu {
-    display: none;
-    position: absolute;
+    display: block;
+    padding: 20px 0;
+    // position: absolute;
     background-color: $bg-color-primary;
 
     &--catalog {
-      width: 100%;
-      height: auto;
+      // width: 100%;
+      // height: auto;
+      padding: 0;
       background:
         linear-gradient(to bottom, $bg-color-brand-rgba 100%, transparent 100%),
         image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
@@ -15,7 +17,7 @@
       background-size: 100% 100%, 185% 185%;
       background-position: right 70% bottom 0;
       background-repeat: no-repeat;
-      z-index: 2;
+      // z-index: 2;
     }
 
     .site-menu__link--catalog {
@@ -32,7 +34,7 @@
   }
 }
 
-@media (min-width: 768px) {          //ПЛАНШЕТ
+@media (min-width: 768px) {
   .site-menu {
     display: block;
     min-width: 480px;
@@ -56,7 +58,7 @@
   }
 }
 
-@media (min-width: 1440px) {  //DESKTOP
+@media (min-width: 1440px) {
   .site-menu {
     .site-menu__link--active::after {
       background: $title-color-light;
@@ -64,6 +66,14 @@
 
     .site-menu__link--active-dark::after {
       background: $brand-color-primary;
+    }
+  }
+
+  .site-menu--catalog {
+    .site-menu__link {
+      &:hover {
+        color: $color-hover-primary;
+      }
     }
   }
 }

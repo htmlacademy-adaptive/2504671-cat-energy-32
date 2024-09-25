@@ -1,5 +1,6 @@
 .location {
   width: 100%;
+  min-height: 362px;
 
   .location__map {
     position: relative;
@@ -15,6 +16,10 @@
       background-repeat: no-repeat;
       pointer-events: none;
     }
+  }
+
+  .location__iframe {
+    min-height: 362px;
   }
 }
 
