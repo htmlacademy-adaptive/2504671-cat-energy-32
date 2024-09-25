@@ -1,0 +1,41 @@
+.location {
+  width: 100%;
+  min-height: 362px;
+
+  .location__map {
+    position: relative;
+
+    &::after {
+      @include absolute-center;
+      position: absolute;
+      content: "";
+      width: 76px;
+      height: 76px;
+      background-image: url("../../icons/map-pin.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+  }
+
+  .location__iframe {
+    min-height: 362px;
+  }
+}
+
+
+@media (min-width: 768px) {      //TABLET
+  .location {
+    width: 100%;
+    height: 35vh;
+
+    .location__map::after {
+      width: 113px;
+      height: 106px;
+    }
+
+    .location__iframe {
+      height: 35vh;
+    }
+  }
+}

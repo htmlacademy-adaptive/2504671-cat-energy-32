@@ -1,1 +1,69 @@
-/* здесь используйте глобальные переменные */
+/* ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ */
+$test: fdc305;
+
+// Гарнитура
+$primary-font: "Lato", "Arial", sans-serif;
+$secondary-font: "Oswald", "Arial Narrow", sans-serif;
+
+// Гаринитура заголовков
+$title-font: "Oswald", "Arial Narrow", sans-serif;
+
+// Размер шрифта
+$font-size-mobile: 14px;
+$font-size-base: 16px;
+
+// Высота строки
+$line-height-mobile: 1.29; //18px
+$line-height-base: 1.5; //24px
+
+// Цвет текста
+$text-color-primary: #444444;
+$text-color-secondary: #000000;
+$text-color-tertiary: #c4c4c4;
+
+// Цвет заголовка
+$title-color-dark: #000000;
+$title-color-dark-secondary:#111111;
+$title-color-light: #ffffff;
+
+// Цвет подзаголовка
+$subtitle-color-dark: #222222;
+
+// Цвет рамки
+$border-color-primary: #d9d9d9;
+$border-color-secondary: #cdcdcd;
+$border-color-tertiary: #e6e6e6;
+
+// Цвет слайдера
+$slider-color: #666666;
+
+// Цвета фона
+$bg-color-primary: #ffffff;
+$bg-color-secondary: #f2f2f2;
+$bg-color-tertiary: #eaeaea;
+$bg-color-brand: #68b738;
+$bg-color-brand-rgba: rgba(104, 183, 56, 0.85);
+
+// Цвет предупреждений
+$alert-color: #ff8282;
+
+// Цвета бренда
+$brand-color-primary: #68b738;
+$brand-color-secondary: #666666;
+$brand-color-tertiary: #ffffff;
+
+// Цвета иконок
+$icon-color-primary: #d3d3d3;
+
+// Цвет в состоянии hover
+$color-hover-primary: #3e3e3e;
+$color-hover-secondary: #68b738;
+
+// Цвет в состоянии active
+$color-active-primary: #6b6b6b;
+$color-active-secondary: #5eaa2f;
+
+// Размеры экрана
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;

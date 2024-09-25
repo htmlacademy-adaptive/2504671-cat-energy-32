@@ -2,6 +2,7 @@ node_modules
 build
 .idea
 .DS_Store
+.vscode/*
 raw/**/*.jpg
 raw/**/*.jpeg
 raw/**/*.png

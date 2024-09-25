@@ -1,0 +1,31 @@
+.error-page {
+  text-align: center;
+  padding: 20px;
+
+  .error-page__title {
+    font-size: 3rem;
+  }
+
+  .error-page__message {
+    font-size: 1rem;
+  }
+
+  .error-page__link {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: $bg-color-brand;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1rem;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

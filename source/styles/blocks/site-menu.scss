@@ -1,0 +1,79 @@
+
+@media (max-width: 767px) {
+  .site-menu {
+    display: block;
+    padding: 20px 0;
+    // position: absolute;
+    background-color: $bg-color-primary;
+
+    &--catalog {
+      // width: 100%;
+      // height: auto;
+      padding: 0;
+      background:
+        linear-gradient(to bottom, $bg-color-brand-rgba 100%, transparent 100%),
+        image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
+        url("../../images/bg-cat-mobile@2x.jpg") 2x);
+      background-size: 100% 100%, 185% 185%;
+      background-position: right 70% bottom 0;
+      background-repeat: no-repeat;
+      // z-index: 2;
+    }
+
+    .site-menu__link--catalog {
+      color: $title-color-light;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .site-menu {
+    display: block;
+    min-width: 480px;
+
+    .site-menu__list {
+      @include flex-center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .site-menu__link--active::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background: $brand-color-primary;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .site-menu {
+    .site-menu__link--active::after {
+      background: $title-color-light;
+    }
+
+    .site-menu__link--active-dark::after {
+      background: $brand-color-primary;
+    }
+  }
+
+  .site-menu--catalog {
+    .site-menu__link {
+      &:hover {
+        color: $color-hover-primary;
+      }
+    }
+  }
+}

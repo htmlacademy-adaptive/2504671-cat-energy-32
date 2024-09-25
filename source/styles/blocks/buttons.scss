@@ -1,0 +1,70 @@
+/* ОСНОВНЫЕ СТИЛИ ДЛЯ ВСЕХ КНОПОК */
+
+//Переменные для стилизации кнопок
+$button-font-size: 1.14rem;
+$button-line-height: 1.25;
+$button-primary-bg: #68b738;
+$button-secondary-bg: transparent;
+$button-tertiary-bg: #f2f2f2;
+$button-primary-color: #ffffff;
+$button-primary-color-rgb: rgba(255, 255, 255, 0.3);
+$button-secondary-color: #000000;
+$button-tertiary-color: #444444;
+$button-hover-bg: #5eaa2f;
+$button-active-bg: #ebebeb;
+
+//Базовая стилизация кнопки: зеленый фон и белый цвет текста
+.button {
+  display: inline-block;
+  padding: 10px 44px;
+  font-family: $secondary-font;
+  font-size: $button-font-size;
+  font-weight: 400;
+  line-height: $button-line-height;
+  color: $button-primary-color;
+  background-color: $button-primary-bg;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background-color 0.4s, color 0.4s, opacity 0.4s;
+
+  &:hover {
+    background-color: $button-hover-bg;
+  }
+
+  &:active {
+    background-color: $button-hover-bg;
+    color: $button-primary-color-rgb;
+  }
+
+  //Стили для разных кнопок
+
+  &--secondary {
+    background-color: $button-secondary-bg;
+    color: $button-secondary-color;
+
+    &:hover {
+      background-color: $button-secondary-bg;
+      color: $button-secondary-color;
+    }
+
+    &:active {
+      color: $button-secondary-color;
+      opacity: 0.3;
+    }
+  }
+
+  &--more {
+    background-color: $button-tertiary-bg;
+    color: $button-tertiary-color;
+
+    &:hover,
+    &:active {
+      background-color: $button-active-bg;
+      color: $button-tertiary-color;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@media (max-width: 767px) {    // МОБИЛЬНЫЙ
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    place-items: center;
+    width: 100%;
+    min-height: 38vh;
+    padding: 20px 20px 0;
+    background:
+      linear-gradient(to bottom, $bg-color-brand-rgba 62%, transparent 62%),
+      image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
+      url("../../images/bg-cat-mobile@2x.jpg") 2x);
+    background-size: cover, 100% 62%;
+    background-position: center, top;
+    background-repeat: no-repeat;
+
+    .hero__title {
+      @include title (2.57rem, 1, $title-color-light);
+      @include no-margin-padding;
+      text-align: center;
+      margin-bottom: 25px;
+      overflow-wrap: break-word;
+    }
+
+    .hero__description {
+      @include title (1rem, 1, $title-color-light);
+      @include no-margin-padding;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .hero__image {
+      margin: 0 auto;
+    }
+
+    .hero__button {
+      min-width: 280px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (min-width: 768px) {  // ПЛАНШЕТ
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+    padding: 15px 30px 0;
+    background-color: $bg-color-primary;
+  }
+
+  .hero__title {
+    @include title (3.75rem, 1, $text-color-secondary);
+    @include no-margin-padding;
+    max-width: 80%;
+    text-align: left;
+    padding-left: 60px;
+    margin-bottom: 40px;
+    overflow-wrap: break-word;
+  }
+
+  .hero__description {
+    @include title (1.25rem, 1, $text-color-secondary);
+    @include no-margin-padding;
+    text-align: left;
+    padding-left: 60px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero__button {
+    position: absolute;
+    top: 30%;
+    left: 11%;
+  }
+}
+
+@media (min-width: 1440px) {    // DESKTOP
+  .hero {
+    padding: 70px;
+
+    .hero__title {
+      max-width: 40%;
+      margin-bottom: 40px;
+    }
+
+    .hero__description {
+      margin-bottom: 52px;
+    }
+
+    .hero__button {
+      position: static;
+      padding: 10px 20px;
+      margin-left: 60px;
+    }
+
+    .hero__image {
+      @include absolute-center;
+      position: absolute;
+      z-index: 2;
+    }
+  }
+}

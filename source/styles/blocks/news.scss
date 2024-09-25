@@ -1,0 +1,134 @@
+.news {
+  width: 100%;
+  padding: 0 20px;
+
+  .news__title {
+    @include no-list-style;
+    @include title (1.71rem, 1);
+    position: relative;
+    margin-bottom: 36px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      width: 4vw;
+      height: 2px;
+      background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
+    }
+  }
+
+  .news__description {
+    @include no-list-style;
+    @include title (1.14rem, 1.15, $text-color-primary);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .news__subscription-form {
+    margin-bottom: 16px;
+
+    .news__subscription-email {
+      @include title(1.43rem, 1.5,$text-color-primary);
+      text-transform: uppercase;
+      width: 100%;
+      padding: 10.5px;
+      border: 1px solid $border-color-secondary;
+    }
+
+    .news__submit-button {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {    // TABLET
+  .news {
+    padding: 0 30px;
+
+    .news__title {
+      @include title (2rem, 1);
+      padding: 0 38px;
+      margin-bottom: 66px;
+
+      &::after {
+        width: 60vw;
+        left: 40%;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%);
+        width: 4vw;
+        height: 2px;
+        background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
+      }
+    }
+
+    .news__description {
+      @include title (1.5rem, 1.33);
+      max-width: 632px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+    }
+
+    .news__subscription-form {
+      @include flex-center;
+      width: 100%;
+      max-width: 632px;
+      max-height: 56px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+
+      .news__submit-button {
+        padding: 17px 44px;
+        max-width: 256px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {     // DESKTOP
+  .news {
+    padding: 0 110px;
+
+    .news__title {
+      @include title (2.5rem, 1);
+      padding: 0;
+      margin-bottom: 70px;
+
+      &::after {
+        // width: 90vw;
+        width: 110%;
+        left: 24%;
+      }
+
+      &::before {
+        // width: 60vw;
+        width: 70%;
+        left: -75%;
+      }
+    }
+
+    .news__description {
+      @include title (1.5rem, 1.33);
+      max-width: 932px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+    }
+
+    .news__subscription-form {
+      @include flex-center;
+      width: 100%;
+      max-width: 752px;
+      max-height: 56px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+  }
+}

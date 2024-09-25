@@ -1,0 +1,75 @@
+.promo {
+  position: relative;
+  width: 100%;
+  min-height: 290px;
+  padding: 40px;
+  background:
+    linear-gradient(to bottom, $bg-color-brand-rgba 100%, transparent 20%),
+    image-set(url("../../images/bg-cat-promo-mobile-desktop@1x.jpg") 1x,
+    url("../../images/bg-cat-promo-mobile-desktop@2x.jpg") 2x);
+  background-size: 100% 100%, cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+
+  .promo__offer {
+    @include no-list-style;
+    @include title (1.14rem, 1.25, $brand-color-tertiary, $primary-font);
+    max-width: 160px;
+    text-align: center;
+
+    &::before {
+      @include absolute-center;
+      top: 35%;
+      display: inline-block;
+      content: "";
+      width: 78px;
+      height: 80px;
+      background-color: #ffffff;
+      mask-image: url("../../icons/stack.svg#gift");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (min-width: 768px) { // TABLET
+  .promo {
+    background-size: 100% 300%;
+    background-position: center center, center -233px;
+
+    .promo__offer {
+      min-width: 240px;
+      text-align: left;
+      margin-left: auto;
+      padding: 15px;
+
+      &::before {
+        top: 53%;
+        left: 15%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .promo {
+    background-size: 100% 100%, cover;
+    background-position: center center;
+
+    width: 100%;
+    min-height: 288px;
+
+    .promo__offer {
+      @include title (1rem, 1.25, $brand-color-tertiary, $primary-font);
+      max-width: 160px;
+      text-align: center;
+      // align-self: end;
+      padding: 7px 40px;
+
+      &::before {
+        @include absolute-center;
+        top: 30%;
+      }
+    }
+  }
+}
