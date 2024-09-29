@@ -4,6 +4,12 @@
   min-width: 280px;
   margin: 0 auto;
   padding: 10px 20px;
+  margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
 
   .main-header__logo {
     @include flex-center;
@@ -14,7 +20,6 @@
   .main-header__wrapper-mobile {
     @include flex-center;
     justify-content: space-between;
-    margin-bottom: 10px;
     width: 100%;
   }
 
@@ -33,7 +38,7 @@
 
 @media (min-width: 768px) {
   .main-header {
-    padding: 25px 30px;
+    padding: 23px 30px;
 
     .main-header__container {
       @include flex-center;

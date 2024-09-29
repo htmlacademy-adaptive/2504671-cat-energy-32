@@ -12,10 +12,10 @@
       @include flex-center;
       @include no-margin-padding;
       justify-content: flex-start;
-      gap: 20px;
+      gap: 17px;
       position: relative;
       text-transform: uppercase;
-      padding: 20px;
+      padding: 21px;
 
       &::before {
         content: "";
@@ -52,14 +52,14 @@
       @include no-margin-padding;
       position: relative;
       color: $text-color-primary;
-      padding: 0 22px 23px;
+      padding: 3px 20px;
       text-align: left;
       width: 100%;
 
       &::after {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: -20px;
         left: 4%;
         right: 4%;
         height: 1px;
@@ -80,14 +80,14 @@
       @include flex-center;
       justify-content: flex-start;
       gap: 15px;
-      padding-left: 20px;
-      padding-top: 15px;
+      padding-left: 18px;
+      padding-top: 40px;
       padding-bottom: 18px;
 
       &::after {
         content: "";
-        width: 32px;
-        height: 10px;
+        width: 25px;
+        height: 15px;
         background-color: $text-color-secondary;
         mask-image: url("../../icons/stack.svg#arrow-right");
         background-size: contain;
@@ -107,7 +107,7 @@
   }
 }
 
-@media (min-width: 768px) {          // TABLET
+@media (min-width: 768px) {
   .programs {
     width: 100%;
   }
@@ -116,11 +116,14 @@
     @include no-list-style;
     @include flex-grid (2, 30px);
     padding: 0 30px;
+    margin-bottom: 4px;
   }
 
   .programs__item {
     min-width: 55%;
-    padding: 75px 60px 50px;
+    min-height: 372px;
+    padding-top: 82px;
+    padding-left: 52px;
     background-color: $bg-color-secondary;
   }
 
@@ -135,7 +138,7 @@
     &::before {
       position: absolute;
       top: 50%;
-      left: 68%;
+      left: 60%;
       content: "";
       width: 200px;
       height: 200px;
@@ -147,7 +150,7 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 71%;
+      left: 65%;
       width: 140px;
       height: 195px;
       background-image: url("../../icons/stack.svg#cat-seat");
@@ -159,7 +162,7 @@
       content: "";
       position: absolute;
       top: 168%;
-      left: 62%;
+      left: 55%;
       width: 268px;
       height: 112px;
       background-image: url("../../icons/stack.svg#cat-go");
@@ -172,7 +175,7 @@
     @include no-margin-padding;
     color: $text-color-primary;
     text-align: left;
-    max-width: 59%;
+    max-width: 340px;
     margin-bottom: 48px;
 
     &::after {
@@ -188,7 +191,7 @@
       position: absolute;
       content: "";
       top: 36%;
-      left: 90%;
+      left: 95%;
       width: 24px;
       height: 12px;
       background-color: $text-color-secondary;
@@ -234,22 +237,22 @@
       .programs__title::before {
         width: 100px;
         height: 100px;
-        top: -50%;
-        left: -8%;
+        top: -80%;
+        left: -6%;
       }
 
       .programs__title--cat-seat::after {
         width: 70px;
         height: 97px;
-        top: -60%;
-        left: -4%;
+        top: -91%;
+        left: -3%;
       }
 
       .programs__title--cat-go::after {
         width: 134px;
         height: 56px;
-        top: -4%;
-        left: -12%;
+        top: -23%;
+        left: -11%;
       }
 
       .programs__description {
