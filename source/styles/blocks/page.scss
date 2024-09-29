@@ -21,6 +21,8 @@
 
   &--error {
     @include flex-center;
+    justify-content: flex-start;
+    width: 100vw;
     height: 100vh;
     background-color: $bg-color-secondary;
   }
@@ -41,8 +43,9 @@
 @media (min-width: 1440px) {
   .page__wrapper-desktop {
     position: relative;
-    max-height: 700px;
-    margin-bottom: 80px;
+    min-height: 720px;
+    padding: 20px 0;
+    margin-bottom: 50px;
     z-index: 1;
 
     &::before {
@@ -51,7 +54,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 95%;
       background:
         linear-gradient(to right, transparent 50%, $bg-color-brand-rgba 50%),
         image-set(url("../../images/bg-cat-desktop\ @1x.jpg") 1x, url("../../images/bg-cat-desktop\ @2x.jpg") 2x);

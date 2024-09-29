@@ -1,0 +1,14 @@
+.htmlacademy-logo {
+  @include flex-center;
+  justify-content: center;
+  width: auto;
+  gap: 140px;
+}
+
+
+@media (min-width: 768px) {
+  .htmlacademy-logo {
+    width: 168px;
+    gap: 20px;
+  }
+}

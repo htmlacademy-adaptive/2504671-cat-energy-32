@@ -1,7 +1,8 @@
 .examples {
   width: 100%;
   background-color: $bg-color-tertiary;
-  padding: 25px 35px;
+  padding: 25px 20px;
+  margin-bottom: 20px;
 
   .examples__title {
     @include title(2.57rem, 1.11);
@@ -24,7 +25,11 @@
     gap: 32px;
     text-align: center;
     width: 100%;
-    margin-bottom: 30px;  //ПО МАКЕТУ 20, ИЗ-ЗА НАДПИСИ УВЕЛИЧИЛА
+    margin-bottom: 30px;
+
+    @media (min-width: 425px) and (max-width: 767px) {
+      width: 40%;
+    }
   }
 
   .examples__item {
@@ -32,7 +37,7 @@
     flex-direction: column;
     gap: 15px;
     min-width: 124px;
-    height: 70px;
+    height: 57px;
     border: 1px solid $border-color-secondary;
     border-radius: 3px;
   }
@@ -40,7 +45,8 @@
   .examples__number {
     @include title(1.71rem, 1);
     text-transform: uppercase;
-    padding-top: 30px;
+    padding-top: 23px;
+    margin-bottom: -5px;
   }
 
   .examples__detail {
@@ -73,8 +79,9 @@
   }
 }
 
-@media (min-width: 768px) {    // TABLET
+@media (min-width: 768px) {
   .examples {
+    padding: 10px 30px;
     background: linear-gradient(to top, $bg-color-tertiary 43%, $bg-color-primary  43%);
 
     .examples__title {
@@ -84,7 +91,7 @@
 
     .examples__description {
       @include no-margin-padding;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
 
     .examples__gallery {
@@ -100,17 +107,18 @@
 
     .examples__list-wrapper {
       @include flex-center;
-      // gap: 167px;
       justify-content: space-between;
-      margin-bottom: 100px;
+      margin-bottom: 80px;
+      width: 100%;
 
       .examples__list {
-        max-width: 394px;
+        justify-content: initial;
         gap: 43px;
       }
 
       .examples__item {
         min-width: 162px;
+        min-height: 70px;
         gap: 10px;
       }
 
@@ -129,7 +137,9 @@
         @include title(1.25rem, 1);
         @include flex-grid (1, 9);
         justify-content: flex-end;
-        max-width: 350px;
+        max-width: 174px;
+        margin-left: 30px;
+        margin-bottom: 32px;
       }
     }
   }
@@ -139,8 +149,15 @@
   .examples {
     @include css-grid (2, 94px);
     background: linear-gradient(to top, $bg-color-tertiary 80%, $bg-color-primary  80%);
+    // background-size: 100% 462px;
+    background-position: 100%;
+    background-repeat: no-repeat;
     padding: 0 110px;
-    margin-bottom: -80px;
+    margin-bottom: -22px;
+
+    .examples__list {
+      margin-bottom: 0;
+    }
 
     .examples__title {
       margin-bottom: 146px;
@@ -154,11 +171,18 @@
 
     .examples__list-wrapper {
       flex-direction: column;
-      gap: 55px;
-      width: 70%;
+      align-items: flex-start;
+      gap: 64px;
+      margin-bottom: 40px;
+
+      .examples__item {
+        gap: 16px;
+      }
 
       .examples__outcome {
-        margin-right: auto;
+        max-width: 400px;
+        margin-left: 0;
+        gap: 65px;
       }
 
       .examples__detail {
@@ -167,7 +191,7 @@
     }
 
     .examples__outcome-label {
-      margin-right: 62px;
+      margin-right: 2px;
     }
   }
 }
