@@ -6,7 +6,8 @@
     @include title (2.57rem, 1, $subtitle-color-dark);
     @include no-margin-padding;
     position: relative;
-    padding: 25px 0 40px;
+    padding-top: 25px;
+    padding-bottom: 40px;
     width: 100%;
 
     &::after {
@@ -34,10 +35,13 @@
     @include no-list-style;
     display: grid;
     grid-template-columns: repeat(1, auto);
+    margin-bottom: 20px;
   }
 
   .catalog__item {
-    @include css-grid (2, 20px);
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    gap: 20px 0;
     grid-template-areas:
       "img    title"
       "img    details"
@@ -59,6 +63,15 @@
       height: 1px;
       background: linear-gradient(to right, transparent 0, $border-color-tertiary 0, $border-color-tertiary 100%, transparent 100%);
     }
+  }
+
+  .catalog__product-title {
+    grid-area: title;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 60%;
+    margin-top: 13px;
   }
 
   .catalog__product-image {
@@ -86,6 +99,13 @@
   .catalog__item.catalog__item--more {
     @include flex-center;
 
+    .catalog__product-title.catalog__product-title--more {
+      padding: 0;
+      width: 280px;
+      margin-top: 41px;
+    }
+
+
     .catalog__description {
       @include title (0.86rem, 1.33, $text-color-primary, $primary-font);
       @include no-margin-padding;
@@ -98,7 +118,6 @@
       @include title (1.14rem, 1.25, $subtitle-color-dark);
       @include no-margin-padding;
       position: relative;
-      grid-area: title;
       text-transform: uppercase;
       overflow-wrap: break-word;
       text-align: center;
@@ -107,18 +126,18 @@
       margin-bottom: 14px;
     }
 
-    .catalog__product-title--more {
-      @include no-margin-padding;
-      text-align: center;
-      padding: 0 20px;
-      margin-top: 60px;
-      margin-bottom: 8px;
-    }
+    // .catalog__product-title--more {
+    //   @include no-margin-padding;
+    //   text-align: center;
+    //   // padding: 0 20px;
+    //   margin-top: 60px;
+    //   margin-bottom: 8px;
+    // }
 
     .catalog__product-title--more::before {
       @include absolute-center;
       content: "";
-      top: -220%;
+      top: -188%;
       width: 30px;
       height: 30px;
       display: block;
@@ -135,6 +154,11 @@
   grid-area: button;
   padding: 10px 50px;
   width: 100%;
+  height: 40px;
+}
+
+.catalog__button-order {
+  margin-top: 2px;
 }
 
 
@@ -144,7 +168,8 @@
 
     .catalog__title {
       @include title (3.75rem, 1, $subtitle-color-dark);
-      margin-bottom: 84px;
+      margin-bottom: 70px;
+      padding: 18px 0;
 
       &::after,
       &::before {
@@ -156,6 +181,7 @@
       grid-template-columns: repeat(auto-fit, minmax(245px, 324px));
       justify-content: space-between;
       gap: 60px;
+      margin-bottom: 65px;
     }
 
     .catalog__item {
@@ -183,7 +209,7 @@
     .catalog__product-title {
       @include title (1.25rem, 1.5, $subtitle-color-dark);
       text-align: center;
-      padding: 0 90px;
+      padding: 0 20px;
       margin: 0 auto;
     }
 
@@ -203,11 +229,12 @@
     }
 
     .catalog__button-order {
-      width: 220px;
+      width: 250px;
       margin: 0 auto;
       max-height: 40px;
       font-size: 1rem;
       line-height: 1.25;
+      margin-bottom: 25px;
     }
 
     .catalog__item::after {
@@ -225,6 +252,12 @@
         min-height: 432px;
         border: 1px solid #d3d3d3;
         background-color: $bg-color-primary;
+      }
+
+      .catalog__product-title.catalog__product-title--more {
+        width: 134px;
+        margin-top: 155px;
+        margin-bottom: 23px;
       }
 
       .catalog__product-title--more {
@@ -267,20 +300,31 @@
 
       .catalog__item {
         max-width: 245px;
-        background: linear-gradient(to top, $bg-color-secondary 90%, transparent 90%);
+        background: linear-gradient(to top, $bg-color-secondary 88%, transparent 88%);
       }
 
       .catalog__product-title {
-        padding: 0 50px;
+        padding: 0;
       }
 
-      .catalog__item-wrapper-more {
+      .catalog__product-image {
+        margin-bottom: 20px;
+      }
+
+      .catalog__item.catalog__item--more .catalog__item-wrapper-more {
         min-height: 245px;
       }
 
       .catalog__item.catalog__item--more .catalog__product-title--more {
-        margin-bottom: 40px;
-        padding: 0 50px;
+        margin-bottom: 54px;
+      }
+
+      .catalog__item.catalog__item--more .catalog__product-title--more::before {
+        top: -70px;
+      }
+
+      .catalog__item.catalog__item--more .catalog__description {
+        padding: 0 34px;
       }
 
       .catalog__item.catalog__description {

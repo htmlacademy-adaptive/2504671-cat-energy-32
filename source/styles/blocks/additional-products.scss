@@ -8,15 +8,15 @@
     @include no-list-style;
     @include title (1.71rem, 1);
     position: relative;
-    margin-bottom: 36px;
+    margin-bottom: 50px;
 
     &::after {
       content: "";
       position: absolute;
       top: 50%;
-      left: 100%;
+      left: 95%;
       transform: translateY(-50%);
-      width: 4vw;
+      width: 11vw;
       height: 2px;
       background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
     }
@@ -77,6 +77,7 @@
   .additional-products__promo {
     @include flex-center;
     align-items: flex-end;
+    margin-bottom: 42px;
   }
 }
 
@@ -87,7 +88,7 @@
     .additional-products__title {
       @include title (2rem, 1);
       padding: 0 38px;
-      margin-bottom: 80px;
+      margin-bottom: 55px;
 
       &::after {
         width: 50vw;
@@ -111,11 +112,12 @@
       padding: 26px 40px;
       min-width: 632px;
       margin: auto;
+      margin-bottom: 37px;
 
       .additional-products__item {
         display: flex;
         flex-wrap: wrap;
-        padding: 26px 0;
+        padding: 33px 0;
 
         &:first-child {
           border-top: 1px solid $border-color-tertiary;
@@ -147,6 +149,7 @@
     .additional-products__promo {
       width: 100%;
       min-height: 200px;
+      margin-bottom: 80px;
     }
   }
 }
@@ -154,11 +157,14 @@
 @media (min-width: 1440px) {
   .additional-products {
     padding: 0 110px;
+    margin-bottom: 20px;
+
 
     .additional-products__title {
       @include title (2.5rem, 1);
       grid-column: span 2;
       padding: 0;
+      margin-bottom: 82px;
 
       &::after {
         width: 100%;
@@ -178,7 +184,7 @@
     }
 
     .additional-products__list {
-      min-width: 288px;
+      height: 288px;
       padding: 0;
       margin: 0;
 
