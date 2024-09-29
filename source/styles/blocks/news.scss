@@ -1,6 +1,7 @@
 .news {
   width: 100%;
   padding: 0 20px;
+  overflow-x: hidden;
 
   .news__title {
     @include no-list-style;
@@ -12,9 +13,9 @@
       content: "";
       position: absolute;
       top: 50%;
-      left: 100%;
+      left: 70%;
       transform: translateY(-50%);
-      width: 4vw;
+      width: 34vw;
       height: 2px;
       background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
     }

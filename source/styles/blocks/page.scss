@@ -21,6 +21,8 @@
 
   &--error {
     @include flex-center;
+    justify-content: flex-start;
+    width: 100vw;
     height: 100vh;
     background-color: $bg-color-secondary;
   }
@@ -41,7 +43,8 @@
 @media (min-width: 1440px) {
   .page__wrapper-desktop {
     position: relative;
-    max-height: 700px;
+    min-height: 720px;
+    padding: 20px 0;
     margin-bottom: 80px;
     z-index: 1;
 

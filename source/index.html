@@ -37,8 +37,8 @@
                 </picture>
               </a>
             </div>
-            <!-- Кнопка открытия/закрытия мобильного меню -->
-            <button class="main-header__toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+
+            <button class="main-header__toggle main-header__toggle--open" type="button" aria-label="Открыть меню" aria-expanded="false">
               <svg class="main-header__icon main-header__icon--burger" width="24" height="24" role="img" aria-hidden="true">
                 <use href="icons/stack.svg#burger"></use>
               </svg>
@@ -47,7 +47,9 @@
               </svg>
             </button>
           </div>
-          <nav class="main-navigation site-menu" data-test="main-navigation">
+
+          <!-- Добавляем класс main-navigation--open, чтобы открыть меню -->
+          <nav class="main-navigation main-navigation--close main-navigation--nojs site-menu" data-test="main-navigation">
             <ul class=" main-navigation__list site-menu__list">
               <li class="main-navigation__item site-menu__item">
                 <a class="main-navigation__link site-menu__link site-menu__link--active" href="/" aria-current="page">
@@ -83,7 +85,7 @@
 
     <main class="main-container" data-test="main-container">
       <section class="programs" data-test="programs">
-        <div class="programs-wrapper">
+        <div class="programs__wrapper">
           <h2 class="visually-hidden">Выбор программы питания для вашего питомца</h2>
           <ul class="programs__list">
             <li class="programs__item">
@@ -99,6 +101,7 @@
           </ul>
         </div>
       </section>
+
       <section class="advantages" data-test="advantages">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
