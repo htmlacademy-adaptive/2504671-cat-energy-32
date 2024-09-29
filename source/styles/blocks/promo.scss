@@ -41,7 +41,7 @@
       min-width: 240px;
       text-align: left;
       margin-left: auto;
-      padding: 15px;
+      padding: 20px;
 
       &::before {
         top: 53%;
@@ -63,7 +63,6 @@
       @include title (1rem, 1.25, $brand-color-tertiary, $primary-font);
       max-width: 160px;
       text-align: center;
-      // align-self: end;
       padding: 7px 40px;
 
       &::before {

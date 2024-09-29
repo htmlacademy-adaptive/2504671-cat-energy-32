@@ -1,39 +1,37 @@
 .logo {
-  @include flex-center;
-}
+  .logo__link:hover .logo__text,
+  .logo__link:hover .logo__img {
+    opacity: 0.8;
+  }
 
-.logo__link:hover .logo__text,
-.logo__link:hover .logo__img {
-  opacity: 0.8;
-}
+  .logo__link:active .logo__text,
+  .logo__link:active .logo__img {
+    opacity: 0.6;
+  }
 
-.logo__link:active .logo__text,
-.logo__link:active .logo__img {
-  opacity: 0.6;
-}
+  .logo__link:hover,
+  .logo__img:hover {
+    opacity: 0.8;
+  }
 
-.logo__link:hover,
-.logo__img:hover {
-  opacity: 0.8;
-}
+  .logo__link:active,
+  .logo__img:active {
+    opacity: 0.6;
+  }
 
-.logo__link:active,
-.logo__img:active {
-  opacity: 0.6;
-}
+  .logo__link--htmlacademy {
+    @include flex-center;
+    width: 27px;
+    height: 34px;
+    background-color: $brand-color-secondary;
+    mask-image: url("../../icons/stack.svg#htmlacademy-logo");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-color 0.3s ease;
 
-.logo__link--htmlacademy {
-  @include flex-center;
-  width: 27px;
-  height: 34px;
-  background-color: $brand-color-secondary;
-  mask-image: url("../../icons/stack.svg#htmlacademy-logo");
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: background-color 0.3s ease;
-
-  &:hover,
-  &:active {
-    background-color: $color-hover-secondary;
+    &:hover,
+    &:active {
+      background-color: $color-hover-secondary;
+    }
   }
 }

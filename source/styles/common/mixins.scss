@@ -42,6 +42,6 @@
 // Сетка на основe Grid
 @mixin css-grid ($columns, $gap) {
   display: grid;
-  grid-template-columns: repeat($columns, 1fr);
+  grid-template-columns: repeat($columns, auto);
   gap: $gap;
 }

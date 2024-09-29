@@ -1,6 +1,7 @@
 .news {
   width: 100%;
   padding: 0 20px;
+  overflow-x: hidden;
 
   .news__title {
     @include no-list-style;
@@ -12,9 +13,9 @@
       content: "";
       position: absolute;
       top: 50%;
-      left: 100%;
+      left: 70%;
       transform: translateY(-50%);
-      width: 4vw;
+      width: 34vw;
       height: 2px;
       background: linear-gradient(to right, transparent 0, $bg-color-brand 0, $bg-color-brand 100%, transparent 100%);
     }
@@ -24,11 +25,11 @@
     @include no-list-style;
     @include title (1.14rem, 1.15, $text-color-primary);
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 33px;
   }
 
   .news__subscription-form {
-    margin-bottom: 16px;
+    margin-bottom: 45px;
 
     .news__subscription-email {
       @include title(1.43rem, 1.5,$text-color-primary);
@@ -36,10 +37,14 @@
       width: 100%;
       padding: 10.5px;
       border: 1px solid $border-color-secondary;
+      margin-bottom: 20px;
     }
 
     .news__submit-button {
       width: 100%;
+      min-height: 53px;
+      font-size: 1.43rem;
+      line-height: 1.3;
     }
   }
 }
@@ -47,6 +52,7 @@
 @media (min-width: 768px) {    // TABLET
   .news {
     padding: 0 30px;
+    margin-bottom: 24px;
 
     .news__title {
       @include title (2rem, 1);
@@ -74,11 +80,13 @@
       @include title (1.5rem, 1.33);
       max-width: 632px;
       margin: 0 auto;
-      margin-bottom: 24px;
+      margin-bottom: 33px;
     }
 
     .news__subscription-form {
-      @include flex-center;
+      display: flex;
+
+
       width: 100%;
       max-width: 632px;
       max-height: 56px;
@@ -89,11 +97,18 @@
         padding: 17px 44px;
         max-width: 256px;
       }
+
+      .news__subscription-email {
+        padding: 10px 13px;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        height: 56px;
+      }
     }
   }
 }
 
-@media (min-width: 1440px) {     // DESKTOP
+@media (min-width: 1440px) {
   .news {
     padding: 0 110px;
 
