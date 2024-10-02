@@ -15,9 +15,34 @@
     background-position: center, top;
     background-repeat: no-repeat;
 
-    @media (min-width: 500px) and (max-width: 767px) {
+    @media (min-width: 400px) and (max-width: 485px) {
+      background:
+        linear-gradient(to bottom, $bg-color-brand-rgba 62%, transparent 62%),
+        image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
+        url("../../images/bg-cat-mobile@2x.jpg") 2x);
       background-size: auto;
-      position: center;
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: 486px) and (max-width: 533px) {
+      background:
+        linear-gradient(to bottom, $bg-color-brand-rgba 61%, transparent 12%),
+        image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
+        url("../../images/bg-cat-mobile@2x.jpg") 2x);
+      background-size: auto;
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: 534px) and (max-width: 767px) {
+      background:
+        linear-gradient(to bottom, $bg-color-brand-rgba 66%, transparent 66%),
+        image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
+        url("../../images/bg-cat-mobile@2x.jpg") 2x);
+      background-size: auto;
+      background-position: center top;
+      background-repeat: no-repeat;
     }
 
     .hero__title {
@@ -106,9 +131,11 @@
     }
 
     .hero__button {
-      position: static;
-      padding: 17px 20px;
+      position: relative;
+      top: 0;
+      left: 0;
       margin-left: 120px;
+      z-index: 2;
     }
 
     .hero__image {

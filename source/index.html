@@ -15,7 +15,6 @@
 
 <body class="page__body">
   <div class="page__container">
-
     <div class="page__wrapper-desktop">
       <header class="main-header" data-test="header">
         <h1 class="visually-hidden">Интернет-магазин CAT ENERGY: широкий ассортимент функционального питания для котов</h1>
@@ -37,19 +36,20 @@
                 </picture>
               </a>
             </div>
-
-            <button class="main-header__toggle main-header__toggle--open" type="button" aria-label="Открыть меню" aria-expanded="false">
+            <!-- Добавялем к main-header__toggle модификатор nojs при отключенном JS -->
+            <!-- При включеном JS меняем соотвествующий модификатор open/close у main-header__toggle -->
+            <button class="main-header__toggle main-header__toggle--nojs" type="button" aria-label="Открыть меню" aria-expanded="false">
               <svg class="main-header__icon main-header__icon--burger" width="24" height="24" role="img" aria-hidden="true">
                 <use href="icons/stack.svg#burger"></use>
               </svg>
-              <svg class="main-header__icon main-header__icon--close" width="18" height="18" role="img" aria-hidden="true" style="display: none;">
+              <svg class="main-header__icon main-header__icon--close" width="18" height="18" role="img" aria-hidden="true">
                 <use href="icons/stack.svg#close"></use>
               </svg>
             </button>
           </div>
-
-          <!-- Добавляем класс к классу main-navigation модификатор open, чтобы открыть меню -->
-          <nav class="main-navigation main-navigation--close main-navigation--nojs site-menu" data-test="main-navigation">
+          <!-- При отклбченно JS site-menu имеет модификатор nojs -->
+          <!-- При включеном JS меняем соотвествующий модификатор open/close у site-menu -->
+          <nav class="main-navigation site-menu site-menu--nojs" data-test="main-navigation">
             <ul class=" main-navigation__list site-menu__list">
               <li class="main-navigation__item site-menu__item">
                 <a class="main-navigation__link site-menu__link site-menu__link--active" href="/" aria-current="page">
@@ -101,7 +101,6 @@
           </ul>
         </div>
       </section>
-
       <section class="advantages" data-test="advantages">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
@@ -174,7 +173,6 @@
           </figure>
         </section>
       </div>
-
     </main>
   </div>
   <footer class="main-footer" data-test="footer">

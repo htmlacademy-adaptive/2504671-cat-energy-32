@@ -34,9 +34,9 @@
               </picture>
             </a>
           </div>
-
-          <!-- Кнопка открытия/закрытия мобильного меню -->
-          <button class="main-header__toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <!-- Добавялем к main-header__toggle модификатор nojs при отключенном JS -->
+          <!-- При включеном JS меняем соотвествующий модификатор open/close у main-header__toggle -->
+          <button class="main-header__toggle main-header__toggle--nojs" type="button" aria-label="Открыть меню" aria-expanded="false">
             <svg class="main-header__icon main-header__icon--burger" width="24" height="24" role="img" aria-hidden="true">
               <use href="icons/stack.svg#burger"></use>
             </svg>
@@ -45,9 +45,9 @@
             </svg>
           </button>
         </div>
-
-        <!-- Добавляем класс к классу main-navigation модификатор open, чтобы открыть меню -->
-        <nav class="main-navigation main-navigation--close  main-navigation--nojs site-menu site-menu--catalog" data-test="main-navigation">
+        <!--  При отключенном JS site-menu имеет модификатор nojs -->
+        <!-- При включеном JS меняем соотвествующий модификатор open/close у site-menu -->
+        <nav class="main-navigation site-menu site-menu--catalog site-menu--nojs" data-test="main-navigation">
           <ul class="main-navigation__list site-menu__list">
             <li class="main-navigation__item main-navigation__item--dark site-menu__item">
               <a class="main-navigation__link site-menu__link site-menu__link--catalog" href="index.html">
@@ -262,9 +262,7 @@
             </dl>
             <a class="catalog__button-order button button--primary" href="#open-modal-order">Заказать</a>
           </li>
-
           <li class="catalog__item catalog__item--more catalog__item--light">
-
             <div class="catalog__item-wrapper-more">
               <a class="catalog__product-link" href="new-products.html">
                 <h3 class="catalog__product-title catalog__product-title--more">Показать еще 100500 товаров</h3>
@@ -272,11 +270,9 @@
               <p class="catalog__description">На самом деле вкусов гораздо больше!</p>
               <a class="catalog__button button button--more catalog__button-order" href="new-products.html">Показать все</a>
             </div>
-
           </li>
         </ul>
       </section>
-
       <section class="additional-products" data-test="additional-products">
         <h2 class="additional-products__title">Дополнительные товары</h2>
         <div class="additional-products__wrapper">
