@@ -3,7 +3,15 @@
   min-height: 362px;
 
   .location__map {
+    @include no-margin-padding;
     position: relative;
+
+    .location__iframe {
+      width: 100%;
+      height: auto;
+      border: none;
+      display: block;
+    }
 
     &::after {
       @include absolute-center;

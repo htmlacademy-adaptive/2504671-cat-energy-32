@@ -9,8 +9,8 @@
     padding: 20px 20px 0;
     background:
       linear-gradient(to bottom, $bg-color-brand-rgba 62%, transparent 62%),
-      image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
-      url("../../images/bg-cat-mobile@2x.jpg") 2x);
+      image-set(url("../../images/bg-cat-mobile@1x.webp") 1x,
+      url("../../images/bg-cat-mobile@2x.webp") 2x);
     background-size: cover, 100% 62%;
     background-position: center, top;
     background-repeat: no-repeat;
@@ -18,8 +18,8 @@
     @media (min-width: 400px) and (max-width: 485px) {
       background:
         linear-gradient(to bottom, $bg-color-brand-rgba 62%, transparent 62%),
-        image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
-        url("../../images/bg-cat-mobile@2x.jpg") 2x);
+        image-set(url("../../images/bg-cat-mobile@1x.webp") 1x,
+        url("../../images/bg-cat-mobile@2x.webp") 2x);
       background-size: auto;
       background-position: center top;
       background-repeat: no-repeat;
@@ -28,8 +28,8 @@
     @media (min-width: 486px) and (max-width: 533px) {
       background:
         linear-gradient(to bottom, $bg-color-brand-rgba 61%, transparent 12%),
-        image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
-        url("../../images/bg-cat-mobile@2x.jpg") 2x);
+        image-set(url("../../images/bg-cat-desktop@1x.webp") 1x,
+        url("../../images/bg-cat-desktop@2x.webp") 2x);
       background-size: auto;
       background-position: center top;
       background-repeat: no-repeat;
@@ -38,8 +38,8 @@
     @media (min-width: 534px) and (max-width: 767px) {
       background:
         linear-gradient(to bottom, $bg-color-brand-rgba 66%, transparent 66%),
-        image-set(url("../../images/bg-cat-mobile@1x.jpg") 1x,
-        url("../../images/bg-cat-mobile@2x.jpg") 2x);
+        image-set(url("../../images/bg-cat-desktop@1x.webp") 1x,
+        url("../../images/bg-cat-desktop@2x.webp") 2x);
       background-size: auto;
       background-position: center top;
       background-repeat: no-repeat;
@@ -120,13 +120,16 @@
     padding: 70px;
 
     .hero__title {
-      max-width: 660px;
-      padding: 0 120px;
+      max-width: 500px;
       margin-bottom: 40px;
+      padding: 0 30px;
+      margin-left: 90px;
     }
 
     .hero__description {
-      padding: 0 120px;
+      max-width: 500px;
+      padding: 0 30px;
+      margin-left: 90px;
       margin-bottom: 52px;
     }
 

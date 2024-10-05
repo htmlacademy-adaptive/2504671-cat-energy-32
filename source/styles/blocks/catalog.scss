@@ -40,16 +40,16 @@
 
   .catalog__item {
     display: grid;
-    grid-template-columns: repeat(2, 140px);
     gap: 20px 0;
     grid-template-areas:
       "img    title"
       "img    details"
       "button button";
     grid-auto-rows: 45px;
+    justify-content: center;
     position: relative;
     font-size: 0.86rem;
-    width: 100%;
+    min-width: 280px;
     min-height: 210px;
     line-height: 1.33;
     padding: 10px 0;
@@ -80,6 +80,7 @@
   }
 
   .catalog__product-details {
+    @include no-margin-padding;
     grid-area: details;
 
     .catalog__product-detail {
@@ -88,10 +89,13 @@
     }
 
     .catalog__product-label {
+      @include no-margin-padding;
       text-align: left;
     }
 
     .catalog__product-value {
+      @include no-margin-padding;
+      margin-left: 0;
       text-align: right;
     }
   }
@@ -179,7 +183,7 @@
 
     .catalog__list {
       grid-template-columns: repeat(auto-fit, minmax(245px, 324px));
-      justify-content: space-between;
+      justify-content: space-evenly;
       gap: 60px;
       margin-bottom: 65px;
     }

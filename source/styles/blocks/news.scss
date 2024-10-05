@@ -33,6 +33,7 @@
 
     .news__subscription-email {
       @include title(1.43rem, 1.5,$text-color-primary);
+      @include no-margin-padding;
       text-transform: uppercase;
       width: 100%;
       padding: 10.5px;

@@ -69,12 +69,6 @@
 
 @media (min-width: 1440px) {
   .site-menu {
-    // width: 55%;
-
-    .site-menu__list {
-      // margin-left: 90%;
-    }
-
     .site-menu__link--active::after {
       background: $title-color-light;
     }

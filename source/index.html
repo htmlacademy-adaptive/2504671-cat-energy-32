@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <title>Интернет-магазин CAT ENERGY</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="/styles/styles.scss" as="style">
+  <link rel="preload" href="/images/hero-img-desktop@2x.webp 2x" as="image">
+  <link rel="preload" href="/fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
@@ -74,10 +78,9 @@
         <h2 class="hero__title">Функциональное питание для котов</h2>
         <p class="hero__description">Занялся собой? Займись котом!</p>
         <picture>
-          <source width="552" height="449" type="image/png" media="(min-width: 1440px)" srcset="images/hero-img-primary@1x.png 1x, images/hero-img-primary@2x.png 2x">
-          <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/hero-img-primary@1x.png 1x, images/hero-img-primary@2x.png 2x">
-          <img class="hero__image" width="280" height="270" src="images/hero-img-mobile@1x.png" srcset="images/hero-img-mobile@2x.png 2x" alt="Корм для котов Cat Energy PRO
-              500 г со вкусом курицы">
+          <source width="552" height="449" type="image/webp" media="(min-width: 1440px)" srcset="images/hero-img-desktop@1x.webp 1x, images/hero-img-desktop@2x.webp 2x">
+          <source width="709" height="609" type="image/webp" media="(min-width: 768px)" srcset="images/hero-img-tablet@1x.webp 1x, images/hero-img-tablet@2x.webp 2x">
+          <img class="hero__image" width="280" height="270" src="images/hero-img-mobile@1x.webp" srcset="images/hero-img-mobile@2x.webp 2x" alt="Корм для котов Cat Energy PRO 500 г со вкусом курицы">
         </picture>
         <a class="hero__button button button--primary" href="program-selection.html">Подобрать программу</a>
       </section>
@@ -120,6 +123,7 @@
           </li>
         </ul>
       </section>
+
       <section class="examples" data-test="examples">
         <div class="examples__wrapper">
           <h2 class="examples__title">Живой пример</h2>
@@ -144,12 +148,12 @@
           <figure class="examples__gallery-list slider__list">
             <figcaption class="visually-hidden">Сравнить изображение кота до и после похудения</figcaption>
             <picture>
-              <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before-primary@1x.png 1x, images/cat-before-primary@2x.png 2x">
-              <img class="examples__gallery-item slider__img-before" width="280" height="256" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" alt="Кот до похудения с Cat Energy Slim">
+              <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/cat-before-primary@1x.webp 1x, images/cat-before-primary@2x.webp 2x" loading="lazy">
+              <img class="examples__gallery-item slider__img-before" width="280" height="256" src="images/cat-before-mobile@1x.webp" srcset="images/cat-before-mobile@2x.webp 2x" alt="Кот до похудения с Cat Energy Slim" loading="lazy">
             </picture>
             <picture>
-              <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after-primary@1x.png 1x, images/cat-after-primary@2x.png 2x">
-              <img class="examples__gallery-item slider__img-after" width="280" height="256" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" alt="Кот после похудения с Cat Energy Slim">
+              <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after-primary@1x.png 1x, images/cat-after-primary@2x.png 2x" loading="lazy">
+              <img class="examples__gallery-item slider__img-after" width="280" height="256" src="images/cat-after-mobile@1x.webp" srcset="images/cat-after-mobile@2x.webp 2x" alt="Кот после похудения с Cat Energy Slim" loading="lazy">
             </picture>
             <button class="examples__gallery-control slider__control" type="button">
               <span class="visually-hidden">Перемещать кнопку слайдера до и после для сравнения изображений</span>

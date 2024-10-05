@@ -2,6 +2,10 @@
   position: relative;
   width: 100%;
 
+  .slider__list {
+    @include no-margin-padding;
+  }
+
   .slider__img-before,
   .slider__img-after {
     position: absolute;
