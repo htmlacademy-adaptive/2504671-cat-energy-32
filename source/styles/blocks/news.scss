@@ -112,6 +112,7 @@
 @media (min-width: 1440px) {
   .news {
     padding: 0 110px;
+    margin-bottom: 54px;
 
     .news__subscription-form {
       display: flex;
@@ -141,7 +142,7 @@
       }
 
       &::before {
-        width: 70%;
+        width: 72%;
         left: -75%;
       }
     }

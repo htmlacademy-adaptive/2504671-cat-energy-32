@@ -96,7 +96,7 @@
       position: relative;
       flex-direction: column;
       align-items: flex-start;
-      gap: 30px;
+      gap: 20px;
       width: auto;
       min-height: 280px;
       margin-bottom: 0;
@@ -124,7 +124,7 @@
 @media (min-width: 1440px) { // DESKTOP
   .advantages {
     padding: 0 110px;
-    margin-bottom: 80px;
+    margin-bottom: 90px;
 
     &::after {
       display: none;
@@ -139,7 +139,8 @@
       margin-bottom: -6px;
 
       .advantages__item {
-        min-height: 280px;
+        min-height: 270px;
+        gap: 38px;
       }
 
       .advantages__item::after {

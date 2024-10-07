@@ -8,10 +8,10 @@
     min-height: 302px;
     padding: 20px 20px 0;
     background:
-      linear-gradient(to bottom, $bg-color-brand-rgba 62%, transparent 62%),
+      linear-gradient(to bottom, $bg-color-brand-rgba 60%, transparent 60%),
       image-set(url("../../images/bg-cat-mobile@1x.webp") 1x,
       url("../../images/bg-cat-mobile@2x.webp") 2x);
-    background-size: cover, 100% 62%;
+    background-size: cover, 100% 60%;
     background-position: center, top;
     background-repeat: no-repeat;
 
@@ -27,10 +27,10 @@
 
     @media (min-width: 486px) and (max-width: 533px) {
       background:
-        linear-gradient(to bottom, $bg-color-brand-rgba 61%, transparent 12%),
+        linear-gradient(to bottom, $bg-color-brand-rgba 61%, transparent 61%),
         image-set(url("../../images/bg-cat-desktop@1x.webp") 1x,
         url("../../images/bg-cat-desktop@2x.webp") 2x);
-      background-size: auto;
+      background-size: cover;
       background-position: center top;
       background-repeat: no-repeat;
     }
@@ -40,7 +40,7 @@
         linear-gradient(to bottom, $bg-color-brand-rgba 66%, transparent 66%),
         image-set(url("../../images/bg-cat-desktop@1x.webp") 1x,
         url("../../images/bg-cat-desktop@2x.webp") 2x);
-      background-size: auto;
+      background-size: cover;
       background-position: center top;
       background-repeat: no-repeat;
     }
@@ -50,7 +50,7 @@
       @include no-margin-padding;
       text-align: center;
       overflow-wrap: break-word;
-      margin-bottom: 25px;
+      margin-bottom: 29px;
     }
 
     .hero__description {
@@ -86,8 +86,8 @@
     .hero__title {
       @include title (3.75rem, 1, $text-color-secondary);
       @include no-margin-padding;
-      padding: 0 90px;
-      margin-bottom: 40px;
+      padding: 14px 90px;
+      margin-bottom: 29px;
     }
 
     .hero__description {
@@ -100,17 +100,14 @@
 
     .hero__button {
       position: absolute;
-      top: 30%;
+      top: 31%;
       left: 11%;
+      font-size: 1.25rem;
+      line-height: 1.3;
       min-height: 54px;
       width: 244px;
       padding: 14px;
       margin-left: 36px;
-    }
-
-    .hero__image {
-      padding: 0 20px;
-      margin-left: 20px;
     }
   }
 }
@@ -122,6 +119,7 @@
     .hero__title {
       max-width: 500px;
       margin-bottom: 40px;
+      margin-top: -11px;
       padding: 0 30px;
       margin-left: 90px;
     }
@@ -146,8 +144,7 @@
       @include no-margin-padding;
       position: absolute;
       left: 58%;
-      top: 44%;
-      max-height: 500px;
+      top: 41%;
       z-index: 2;
     }
   }
