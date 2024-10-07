@@ -30,8 +30,8 @@
         linear-gradient(to bottom, $bg-color-brand-rgba 61%, transparent 61%),
         image-set(url("../../images/bg-cat-desktop@1x.webp") 1x,
         url("../../images/bg-cat-desktop@2x.webp") 2x);
-      background-size: cover;
-      background-position: center top;
+      background-size: contain, 60% 61%;
+      background-position: 80% 50%, top;
       background-repeat: no-repeat;
     }
 
@@ -40,7 +40,7 @@
         linear-gradient(to bottom, $bg-color-brand-rgba 66%, transparent 66%),
         image-set(url("../../images/bg-cat-desktop@1x.webp") 1x,
         url("../../images/bg-cat-desktop@2x.webp") 2x);
-      background-size: cover;
+      background-size: contain, 60% 66%;
       background-position: center top;
       background-repeat: no-repeat;
     }
