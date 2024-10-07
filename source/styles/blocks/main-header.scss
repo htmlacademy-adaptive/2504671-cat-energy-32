@@ -54,7 +54,11 @@
 
 @media (min-width: 768px) {
   .main-header {
-    padding: 25px 30px;
+    padding: 17px 30px;
+
+    .main-header__wrapper-mobile {
+      padding: 12px 4px;
+    }
 
     .main-header__container {
       @include flex-center;
@@ -75,6 +79,11 @@
 @media (min-width: 1440px) {
   .main-header {
     padding: 55px 110px 29px;
+
+    .main-header__logo {
+      width: 193px;
+      gap: 8px;
+    }
 
     .main-header__container {
       position: relative;

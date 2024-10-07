@@ -50,10 +50,10 @@
   }
 }
 
-@media (min-width: 768px) {    // TABLET
+@media (min-width: 768px) {
   .news {
     padding: 0 30px;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 
     .news__title {
       @include title (2rem, 1);
@@ -81,13 +81,11 @@
       @include title (1.5rem, 1.33);
       max-width: 632px;
       margin: 0 auto;
-      margin-bottom: 33px;
+      margin-bottom: 22px;
     }
 
     .news__subscription-form {
       display: flex;
-
-
       width: 100%;
       max-width: 632px;
       max-height: 56px;
@@ -97,6 +95,8 @@
       .news__submit-button {
         padding: 17px 44px;
         max-width: 256px;
+        font-size: 1.25rem;
+        line-height: 1.3px;
       }
 
       .news__subscription-email {
@@ -120,6 +120,14 @@
       max-height: 56px;
       margin: 0 auto;
       margin-bottom: 50px;
+
+      .news__subscription-email {
+        padding: 10px;
+      }
+
+      .news__submit-button {
+        max-width: 258px;
+      }
     }
 
     .news__title {
